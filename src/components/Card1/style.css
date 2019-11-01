@@ -1,0 +1,9 @@
+.Card{
+  text-align: center;
+  background-color: transparent;
+
+}
+
+.Card.Header{
+  background-color: transparent;
+}

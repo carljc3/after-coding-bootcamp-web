@@ -1,0 +1,16 @@
+#root > div > nav > a{
+color: whitesmoke;
+font-family: 'Source Code Pro', monospace;
+text-shadow: 2px 2px 4px black;
+font-size: 25px;
+}
+
+
+.Nav.navbar-nav{
+
+}
+
+#root > div > nav{
+  background-image: linear-gradient(to bottom right, #65ad9a,  #2c666f);
+}
+
