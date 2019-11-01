@@ -7,7 +7,7 @@ import ImageOne from "./components/FP_IMG";
 import ResumeBuilder from "./components/Resume";
 import FlexBox from "./components/Youtube";
 import {Jumbotron,Container, Row, Col} from 'react-bootstrap';
-
+import JobPostings from './components/jobPostings';
 
  const App=()=> 
    (
@@ -29,8 +29,8 @@ import {Jumbotron,Container, Row, Col} from 'react-bootstrap';
       <ResumeBuilder/>
       <FlexBox/>
       <FlexBox/>
-    </div>
-   
+      <JobPostings/>
+   </div>
   );
 
 
