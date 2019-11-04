@@ -1,0 +1,25 @@
+/* .Card{
+  text-align: center;
+  background-color: transparent;
+
+}
+
+.Card.Header{
+  background-color: transparent;
+} */
+
+h2{
+  text-align:center;
+  color: grey;
+  /* font-family: 'Source Code Pro', monospace; */
+  font-family: 'Staatliches', cursive;
+  padding-bottom: 70px;
+  /* margin-left: -154px; */
+}
+
+
+.Icon1,.Icon2,.Icon3,.Icon4{
+  width:70px;
+  height:70px;
+ 
+}
