@@ -8,6 +8,8 @@ import ResumeBuilder from "./components/Resume";
 import FlexBox from "./components/Youtube";
 import {Jumbotron,Container, Row, Col} from 'react-bootstrap';
 import JobPostings from './components/jobPostings';
+import Login from "./components/Login";
+import SignUp from "./components/Signup";
 
  const App=()=> 
    (
@@ -30,6 +32,8 @@ import JobPostings from './components/jobPostings';
       <FlexBox/>
       <FlexBox/>
       <JobPostings/>
+      <Login/>
+      <SignUp/>
    </div>
   );
 
