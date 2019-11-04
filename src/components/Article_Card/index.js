@@ -1,18 +1,20 @@
 import React from "react";
-import {Card , ListGroup} from "react-bootstrap";
+import {Jumbotron,Container} from "react-bootstrap";
 import "./index.css"
 
 function ArticleCard(props){
   return (
+    <Jumbotron  className="Jumbotron2 fluid"> 
+    <Container  className="Container fluid">
+    {/* <h1>Fluid jumbotron</h1>
+    <p>
+      This is a modified jumbotron that occupies the entire horizontal space of
+      its parent.
+    </p> */}
+  </Container>
+</Jumbotron>
 
-<Card style={{ width: '18rem' }}>
-  <Card.Header fluid className= "CardHeader" >Articles</Card.Header>
-  <ListGroup variant="flush">
-    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-  </ListGroup>
-</Card>
+
 
 
   )
