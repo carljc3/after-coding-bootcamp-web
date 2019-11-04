@@ -1,37 +1,16 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import OurJumbotron from './components/Jumbotron';
-import Card from "./components/Card1";
-import ArticleCard from "./components/Article_Card";
-import ImageOne from "./components/FP_IMG";
-import ResumeBuilder from "./components/Resume";
-import FlexBox from "./components/Youtube";
-import {Jumbotron,Container, Row, Col} from 'react-bootstrap';
-import JobPostings from './components/jobPostings';
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import Home from "./pages/Home"
+import Portfolio from './pages/Portfolio'
+import Navbar from "./components/NavBar"
 
  const App=()=> 
-   (
-    <div>
-      <NavBar/>
-      <OurJumbotron title="Searching for your next step?"/>
-      <Card/>
-      <Container className="container-fluid">
-        <Row className="mw-100 no-gutters">
-          
-          <Col sm="6">
-          <ArticleCard/>
-          </Col>
-          <Col sm="6">
-          <ImageOne/>
-          </Col>
-      </Row>
-      </Container>
-      <ResumeBuilder/>
-      <FlexBox/>
-      <FlexBox/>
-      <JobPostings/>
-   </div>
+(
+   <Router>
+     <Navbar/>
+     <Route exact path="/" component={Home}/>
+     <Route exact path = "/portfolio" component = {Portfolio}/>
+   </Router>
   );
-
 
 export default App;
