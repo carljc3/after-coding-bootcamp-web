@@ -6,6 +6,9 @@ export default {
   // Gets all jobs
   getJobPostings: function() {
     return axios.get(`${url}/api/jobPostings`);
+  },
+  getYouTubeVIDEOS: function() {
+    return axios.get(`${url}/api/YouTubeVIDEOS`);
   }
 };
 

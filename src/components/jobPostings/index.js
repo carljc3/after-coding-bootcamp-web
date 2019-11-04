@@ -12,9 +12,10 @@ class JobPostings extends Component {
 
   loadJobPostings = () => {
     API.getJobPostings()
-      .then(res =>
+      .then(res =>{
+        console.log('getJobPostings res', res.data)
         this.setState({ JobPostings: res.data.listings.listing })
-      )
+      })
       .catch(err => console.log(err));
   };
 
