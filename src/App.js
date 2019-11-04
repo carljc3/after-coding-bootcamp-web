@@ -11,6 +11,7 @@ import Navbar from "./components/NavBar"
      <Route exact path="/" component={Home}/>
      <Route exact path = "/portfolio" component = {Portfolio}/>
    </Router>
+
   );
 
 export default App;
