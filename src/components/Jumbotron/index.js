@@ -5,12 +5,12 @@ import "./style.css";
 
 function OurJumbotron(props){
   return(
-  <Jumbotron fluid className="Jumbotron"> 
-  <Container fluid className="Container">
-    <h1>{props.title}</h1>
+  <Jumbotron  className="Jumbotron fluid"> 
+  <Container  className="Container fluid">
+    {/* <h1>{props.title}</h1>
     <p>
       Look no further.
-    </p>
+    </p> */}
   </Container>
 </Jumbotron>
 )

@@ -1,16 +1,28 @@
-#root > div > nav > a{
-color: whitesmoke;
+#root >  nav > a{
+color: grey;
 font-family: 'Source Code Pro', monospace;
-text-shadow: 2px 2px 4px black;
+/* text-shadow: 0.5px 0.5px 0.5px black; */
 font-size: 25px;
 }
 
-
-.Nav.navbar-nav{
-
+.Button{
+  border-radius: 7px;
+  background-image: linear-gradient(to bottom right, rgb(96, 247, 96), rgb(33, 200, 212));
+  border: none;
+  font-family: 'Source Code Pro', monospace;
+  box-shadow: 1px  black;
 }
 
-#root > div > nav{
-  background-image: linear-gradient(to bottom right, #65ad9a,  #2c666f);
+.NavKeyLogin{
+  color: grey;
+font-family: 'Source Code Pro', monospace;
+}
+
+/* .Nav.navbar-nav{
+
+} */
+
+#root > nav{
+  background-image: transparent;
 }
 
