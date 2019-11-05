@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from '../utils/API'
 // import "./style.css";
 
 class SignUp extends Component {
@@ -11,7 +12,7 @@ class SignUp extends Component {
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
-    const { name, value } = event.target;
+    let{ name, value } = event.target;
 
     if (name === "password") {
       value = value.substring(0, 15);
@@ -34,6 +35,11 @@ class SignUp extends Component {
       );
     } else {
       alert(`Hello ${this.state.username}`);
+      API.signUp({
+        username:this.state.username,
+        email:this.state.email,
+        password:this.state.password
+      })
     }
   
   };
@@ -61,7 +67,7 @@ class SignUp extends Component {
             value={this.state.password}
             name="password"
             onChange={this.handleInputChange}
-            type="text"
+            type="password"
             placeholder="Password"
           />
           <button onClick={this.handleFormSubmit}>Create Account!</button>
