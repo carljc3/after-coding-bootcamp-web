@@ -36,6 +36,9 @@ class JobPostings extends Component {
     } else if(type==="video"){
       //save to video array
     }
+      else if(type==="articles"){
+      //save to articles array
+      }
     console.log(data,type)
   }
 
