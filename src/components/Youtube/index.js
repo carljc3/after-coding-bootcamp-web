@@ -1,19 +1,54 @@
-import React from "react";
-import {Container , Row, Col} from "react-bootstrap";
-import "./index.css"
+import React, { Component } from "react";
+import API from "../utils/API";
+import YouTubeVideoCard from '../YouTubeVideoCard'
+import './style.css'
+class YoutubePostings extends Component {
+  state = {
+    YoutubePosting: []
+  };
 
-function FlexBox (props){
-  return (
+  componentDidMount() {
+    this.loadYoutube();
+  }
 
-<Container>
-  <Row>
-    <Col xs>First, but unordered</Col>
-    <Col xs={{ order: 12 }}>Second, but last</Col>
-    <Col xs={{ order: 1 }}>Third, but second</Col>
-  </Row>
-</Container>
+  loadYoutube = () => {
+    API.getYouTube()
+      .then(res =>
+        this.setState({ YoutubePosting: res.data.items })
+        
+      )
+      .catch(err => console.log(err));
+  };
 
-  )
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    
+  };
+
+  render() {
+    return (
+     <div className = "youTubeFlex">
+         {
+             this.state.YoutubePosting.map(video =>{
+                //  return (
+                // <div className= "container">
+                //     <h3>Kind: {video.kind}</h3>
+                //     <h1>E tag: {video.snippet.channelId} </h1>
+                // </div>)
+                return <YouTubeVideoCard videoId={video.id.videoId}/>
+             })
+            
+        }
+     </div>
+    );
+  }
 }
 
-export default FlexBox;
+export default YoutubePostings;
