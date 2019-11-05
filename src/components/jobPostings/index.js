@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import FavoriteButton from '../FavoriteButton'
 
 class JobPostings extends Component {
   state = {
@@ -14,7 +15,6 @@ class JobPostings extends Component {
     API.getJobPostings()
       .then(res =>{
         console.log('getJobPostings res', res.data)
-        this.setState({ JobPostings: res.data.listings.listing })
       })
       .catch(err => console.log(err));
   };
@@ -30,6 +30,14 @@ class JobPostings extends Component {
     event.preventDefault();
     
   };
+  favoriteThingHandler = (data,type)=>{
+    if(type==='job'){
+      //save to jobs array
+    } else if(type==="video"){
+      //save to video array
+    }
+    console.log(data,type)
+  }
 
   render() {
     return (
@@ -40,6 +48,7 @@ class JobPostings extends Component {
                 <div className= "container">
                     <h3>Title: {posting.title}</h3>
                     <h1>How to Apply: {posting.apply_url} </h1>
+                 <FavoriteButton data={posting} whereToSave="job" clickHandler={this.favoriteThingHandler}/>
                 </div>)
              })
          }
@@ -49,3 +58,9 @@ class JobPostings extends Component {
 }
 
 export default JobPostings;
+
+// <i class="fa fa-star fa-2x"></i> <---filled
+
+// <i class="fa fa-star-o fa-2x"></i> <---unfilled
+
+// CDN <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
