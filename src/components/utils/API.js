@@ -9,9 +9,9 @@ export default {
   },
 
    // Gets all jobs
-   getYouTube: function() {
-    return axios.get(url+`/api/YoutubeVideos`);
-  }
+  //  getYouTube: function() {
+  //   return axios.get(url+`/api/YoutubeVideos`);
+  // }
 };
 
 
