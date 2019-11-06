@@ -11,7 +11,10 @@ export default {
     return axios.post(`${url}/login`,user)
   },
   signUp: function(user) {
-    return axios.post(`${url}/signup`,user)
+    return axios.post(`${url}/signup`,user)  
+  },
+   getYouTube: function() {
+    return axios.get(url+`/api/YoutubeVideos`);
   }
 };
 

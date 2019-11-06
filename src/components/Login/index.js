@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-// import "./style.css";
-import API from "../utils/API"
+import API from "../utils/API";
+import { Redirect } from "react-router-dom";
+
 class Login extends Component {
   // Setting the component's initial state
   state = {
@@ -27,10 +28,13 @@ class Login extends Component {
     }).then(data=>{
       console.log(data);
     })
-    // create new object that contains all the login data
-    // axios.post(url of choice, userdata) .then (user profile info )/.catch request to the backend 
-    // 
   };
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+        return <Redirect to='/portfolio' />
+    }
+}
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop

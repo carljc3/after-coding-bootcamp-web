@@ -8,29 +8,35 @@ export default class Login extends Component {
   state = {
       isShown: false,
       email: '',
-      password: '',
-      user: "",
+      username: "",
+      password: "",
       loggedInUser: '',
       redirect: false,
-      modalClasses : "modal d-block"
+      modalClasses : "modal d-block",
   };
+
   handleInputChange = event => {
-      const { name, value } = event.target;
-      this.setState({
-          [name]: value
-      });
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
   };
+
   handleFormSubmit = event => {
-      event.preventDefault();
-      API.logMeIn({
-        username:this.state.username,
-        password:this.state.password
-      }).then(data=>{
-        console.log(data)
-        this.setState ({
-          redirect: true
-        })
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    API.logMeIn({
+      username:this.state.username,
+      password:this.state.password
+    }).then(data=>{
+      console.log(data)
+      this.setState ({
+        redirect: true
       })
+    })
   };
 
   renderRedirect = () => {
@@ -53,13 +59,13 @@ export default class Login extends Component {
                   <div className="modal-dialog" role="document">
                       <div className="modal-content">
                           <div className="modal-header text-center">
-                              <h4 className="modal-title w-100 font-weight-bold">Sign Up</h4>
+                              <h4 className="modal-title w-100 font-weight-bold">Login</h4>
                               <button  onClick={this.props.clickHandler} type="button" className="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
                           </div>
                           <div className="modal-body modal-open mx-3">
-                          <h5 className="text-center">Create an account!</h5>
+                          <h5 className="text-center">Login to your account</h5>
                               <div className="md-form mb-5">
                                   {/* <i className="fas fa-user prefix grey-text"></i> */}
                                   <label data-error="wrong" data-success="right" htmlFor="form34">Username</label>
@@ -71,7 +77,7 @@ export default class Login extends Component {
                               </div>
                           </div>
                           <div className="modal-footer d-flex justify-content-center">
-                              <button onClick={this.handleFormSubmit} data-dismiss="modal" className="login-btn btn btn-info my-4 btn-block" type="submit">Create</button>
+                              <button onClick={this.handleFormSubmit} data-dismiss="modal" className="login-btn btn btn-info my-4 btn-block" type="submit" variant="success">Log In</button>
                           </div>
                       </div>
                   </div>

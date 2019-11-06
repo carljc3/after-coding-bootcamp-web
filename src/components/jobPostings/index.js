@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import JobCard from "../JobCard"
+import './style.css';
 
 class JobPostings extends Component {
   state = {
@@ -32,7 +34,7 @@ class JobPostings extends Component {
 
   render() {
     return (
-     <div>
+     <div className="JobPosting">
          {
              this.state.JobPostings.map(posting =>{
                  return (
@@ -40,6 +42,7 @@ class JobPostings extends Component {
                     <h3>Title: {posting.title}</h3>
                     <h1>How to Apply: {posting.apply_url} </h1>
                 </div>)
+                return <JobCard job={posting}/>
              })
          }
      </div>
