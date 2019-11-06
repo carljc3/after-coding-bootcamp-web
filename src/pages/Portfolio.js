@@ -11,9 +11,9 @@ export default class Portfolio extends Component {
   }
 
   componentDidMount(){
-    API.getLoggedInUser().then(user=>{
-      console.log(user)
-      this.setState({user:user})
+    API.getLoggedInUser().then(res=>{
+      console.log(res.data)
+      this.setState({user:res.data})
     }).catch(err=>{
       console.log(err.response)
     })
