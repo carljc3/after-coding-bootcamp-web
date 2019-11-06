@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-// import "./style.css";
+import API from "../utils/API";
+import { Redirect } from "react-router-dom";
 
 class Login extends Component {
   // Setting the component's initial state
@@ -21,10 +22,19 @@ class Login extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    // create new object that contains all the login data
-    // axios.post(url of choice, userdata) .then (user profile info )/.catch request to the backend 
-    // 
+    API.logMeIn({
+      username:this.state.username,
+      password:this.state.password
+    }).then(data=>{
+      console.log(data);
+    })
   };
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+        return <Redirect to='/portfolio' />
+    }
+}
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
@@ -42,7 +52,7 @@ class Login extends Component {
             value={this.state.password}
             name="password"
             onChange={this.handleInputChange}
-            type="text"
+            type="password"
             placeholder="Password"
           />
           <button onClick={this.handleFormSubmit}>Login!</button>
@@ -53,5 +63,3 @@ class Login extends Component {
 }
 
 export default Login;
-
-// need to add mlab from mongo 

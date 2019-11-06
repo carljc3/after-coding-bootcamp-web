@@ -11,24 +11,24 @@ function cards(props) {
   </Row>
   <Row>
     <Col className="text-center"
-     ><a href="/">
+     ><a className="nav-link js-scroll-trigger" href="#articles">
   <Image src="https://i.imgur.com/YnOCmYZ.png" className="Icon1"  /></a>
   <br></br>
   <p>Relevant Articles </p> </Col>
     <Col className="text-center"
-     > <a href="/">
+     ><a class="nav-link js-scroll-trigger" href="#resume">
   <Image src="https://i.imgur.com/eP7JxhI.png" className="Icon2"  /></a>
   <br></br>
   <p>Resources for generating your resume and what companies are looking for. </p> 
   </Col>
     <Col className="text-center"
-     ><a href="/">
+     ><a class="nav-link js-scroll-trigger" href="#videos">
   <Image src="https://i.imgur.com/WFZkUuu.png" className="Icon3" /></a>
   <br></br>
   <p>Videos for continued education.</p> 
   </Col>
   <Col className="text-center"
-     ><a href="/">
+     ><a href="/portfolio">
   <Image src="https://i.imgur.com/tWIF949.png" className="Icon4" /></a>
   <br></br>
   <p>Last but not least a secure profile for you to store all your relevant information.</p>
