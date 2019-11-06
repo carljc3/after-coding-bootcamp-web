@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import API from "../utils/API";
-import axios from "axios";
-import { Redirect } from "react-router-dom";
+import axios from "./node_modules/axios";
+import { Redirect } from "./node_modules/react-router-dom";
 
 
 export default class Login extends Component {
