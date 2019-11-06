@@ -4,24 +4,43 @@ import OurJumbotron from '../components/Jumbotron';
 import Card from "../components/Card1";
 import ArticleCard from "../components/Article_Card";
 import ArticleAccordian from "../components/Articles/index";
-import FlexBox from "../components/Youtube";
-import {Jumbotron,Container, Row, Col} from 'react-bootstrap';
 import JobPostings from '../components/jobPostings';
+import Resume from "../components/Resume/Resume";
+import JumboTwo from "../components/Jumbo2/Jumbo2"
+import YoutubePostings from "../components/Youtube";
+import Login from "../components/Login/login.js"
 
 
 
 export default class Home extends React.Component {
+  state={
+    showLogin:false
+  }
+  showLogin = ()=>{
+    this.setState({
+      showLogin:true
+    })
+  }
+  hideLogin= ()=>{
+    this.setState({
+      showLogin : false
+    })
+  }
   render() {
     return (
       <div>
       {/* <NavBar/> */}
+      <button onClick={this.showLogin}></button>
+      {this.state.showLogin?<Login clickHandler={this.hideLogin}/>:null}
       <OurJumbotron title="Searching for your next step?"/>
       <Card/>
       <ArticleCard/>
       <ArticleAccordian/>
-      <FlexBox/>
-      <FlexBox/>
+      <Resume/>
+      <JumboTwo/>
       <JobPostings/>
+      <YoutubePostings/>
+  
    </div>
     )
   }

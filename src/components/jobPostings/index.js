@@ -106,7 +106,7 @@ class JobPostings extends Component {
   render() {
     let btn_class = this.state.black ? "blackButton" : "whiteButton";
     return (
-     <div>
+     <div className="JobPosting">
          {
              this.state.JobPostings.map(posting =>{
                  return (

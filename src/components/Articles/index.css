@@ -1,0 +1,21 @@
+.Accordion{
+  /* padding-top: 90px; */
+}
+
+.Card{
+
+}
+
+
+.SmallImg{
+padding-top: 150px;
+width:500px;
+padding-bottom: 20px;
+}
+
+h1{
+  padding-top: 90px;
+  color: grey;
+  /* font-family: 'Source Code Pro', monospace; */
+  font-family: 'Staatliches', cursive;
+}

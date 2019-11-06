@@ -10,4 +10,5 @@ export default {
   getYouTubeVIDEOS: function() {
     return axios.get(`${url}/api/YouTubeVIDEOS`);
   }
+
 };
