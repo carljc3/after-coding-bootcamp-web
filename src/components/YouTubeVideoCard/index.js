@@ -8,7 +8,9 @@ export default function YouTubeCard(props) {
     width: '200'
   };
   return (
+
     <div className="YouTubeVideoCard" id="video">
+
       <YouTube videoId={props.videoId}opts={opts}/>
     </div>
   );

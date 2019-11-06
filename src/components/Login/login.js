@@ -4,6 +4,7 @@ import axios from "axios";
 import { Redirect } from "react-router-dom";
 
 
+
 export default class Login extends Component {
   state = {
       isShown: false,
@@ -45,6 +46,7 @@ export default class Login extends Component {
     }
 }
 
+
   hideModal = ()=>{
     this.setState({
       modalClasses :'modal fade'
@@ -65,11 +67,13 @@ export default class Login extends Component {
                               </button>
                           </div>
                           <div className="modal-body modal-open mx-3">
+
                           <h5 className="text-center">Login to your account</h5>
                               <div className="md-form mb-5">
                                   {/* <i className="fas fa-user prefix grey-text"></i> */}
                                   <label data-error="wrong" data-success="right" htmlFor="form34">Username</label>
                                   <input type="text" required name="username" value={this.state.username} onChange={this.handleInputChange} className="form-control" placeholder="" />
+
                                   <br />
                                   {/* <i className="fas fa-lock"></i> */}
                                   <label data-error="wrong" data-success="right" htmlFor="form34">Password</label>
@@ -77,13 +81,18 @@ export default class Login extends Component {
                               </div>
                           </div>
                           <div className="modal-footer d-flex justify-content-center">
-                              <button onClick={this.handleFormSubmit} data-dismiss="modal" className="login-btn btn btn-info my-4 btn-block" type="submit" variant="success">Log In</button>
+
+   
+                              <button onClick={this.handleFormSubmit} data-dismiss="modal" className="login-btn btn btn-info my-4 btn-block" type="submit">Log In</button>
+
                           </div>
                       </div>
                   </div>
               </div>
+
               {this.renderRedirect()};
           </div>
       )
   }
 }
+

@@ -5,6 +5,7 @@ const url = "http://localhost:3030"
 export default {
   // Gets all jobs
   getJobPostings: function() {
+
     return axios.get(`${url}/api/jobPostings`);
   },
   logMeIn: function(user) {
@@ -16,6 +17,7 @@ export default {
    getYouTube: function() {
     return axios.get(url+`/api/YoutubeVideos`);
   }
+
 };
 
 

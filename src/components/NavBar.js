@@ -1,15 +1,15 @@
 import React from "react";
 import {Navbar, Nav, Button} from "react-bootstrap";
 import Login from "./Login/login.js";
-import Signup from "./Signup"
+import Signup from "./SignUp/"
 import '../styles/NavBar.css';
-
 
 
 class NavDropdownExample extends React.Component {
   state={
     showLogin:false,
-    showSignup:false,
+    showSignup:false
+
   }
   showLogin = ()=>{
     this.setState({
@@ -63,8 +63,11 @@ class NavDropdownExample extends React.Component {
     {this.state.showLogin?<Login clickHandler={this.hideLogin}/>:null}
     {this.state.showSignup?<Signup clickHandler={this.hideSignup}/>:null}
   </Navbar>
+
+  
   );
 }
 }
+
 
 export default NavDropdownExample;
