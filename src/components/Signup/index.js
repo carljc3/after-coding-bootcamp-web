@@ -14,6 +14,7 @@ export default class Login extends Component {
       redirect: false,
       modalClasses : "modal d-block"
   };
+  
   handleInputChange = event => {
       const { name, value } = event.target;
       this.setState({

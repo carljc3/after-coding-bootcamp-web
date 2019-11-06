@@ -1,8 +1,5 @@
-.Accordion{
-  /* padding-top: 90px; */
-}
-
 .Card{
+  background-color: #2e2e33; 
 
 }
 
@@ -18,4 +15,35 @@ h1{
   color: grey;
   /* font-family: 'Source Code Pro', monospace; */
   font-family: 'Staatliches', cursive;
+
+}
+
+.CardHeader, .CardHeader1, .CardHeader2, .CardHeader3{
+    background-image: linear-gradient(to bottom right,  #5f90f6, #a5aff6 );
+  text-align: center;
+  
+}
+
+.Button0 ,.Button1,.Button2, .Button3{
+  color: white;
+  font-family: 'Staatliches', cursive;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px grey;
+}
+a{
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+
+}
+
+.CardBody0, .CardBody1, .CardBody2, .CardBody3{
+background-color: #2e2e33;
+}
+
+button{
+  background-color: transparent;
+  border:none;
+  color: rgb(205, 190, 50);
+  font-family: 'Source Code Pro', monospace;
+
 }
