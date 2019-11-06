@@ -16,6 +16,9 @@ export default {
   },
    getYouTube: function() {
     return axios.get(url+`/api/YoutubeVideos`);
+  },
+  getLoggedInUser:function(){
+    return axios.get(`${url}/checkloggedinuser`,{withCredentials:true})
   }
 
 };

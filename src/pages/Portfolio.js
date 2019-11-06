@@ -1,8 +1,23 @@
 import React, { Component } from 'react'
 import { Card, ListGroup, ListGroupItem, Button, Container, Col, Row } from 'react-bootstrap'
 import "../styles/Portfolio.css"
+import API from '../components/utils/API.js'
 
 export default class Portfolio extends Component {
+  state={
+    user:{
+      username:"fakename"
+    }
+  }
+
+  componentDidMount(){
+    API.getLoggedInUser().then(user=>{
+      console.log(user)
+      this.setState({user:user})
+    }).catch(err=>{
+      console.log(err.response)
+    })
+  }
   render() {
     return (
       <Container>
@@ -11,7 +26,7 @@ export default class Portfolio extends Component {
             <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" src="https://www.pngkey.com/png/full/349-3499617_person-placeholder-person-placeholder.png" />
               <Card.Body>
-                <Card.Title>John Doe</Card.Title>
+                <Card.Title>{this.state.user.username}</Card.Title>
               </Card.Body>
               <ListGroup className="list-group-flush">
                 <ListGroupItem>Job:</ListGroupItem>
