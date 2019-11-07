@@ -9,7 +9,7 @@ function ArticleAccordian(props){
 <Container>
   <Row>
 
-    <Col><h1>Articles</h1>
+    <Col><h1 id="articles">Articles</h1>
     <Accordion className="Accordion fluid">
   <Card className="Card fluid">
     <Card.Header className="CardHeader fluid">
@@ -30,6 +30,7 @@ function ArticleAccordian(props){
   <button>Save</button></li>
 
 </ul>  
+
 </Card.Body>
     </Accordion.Collapse>
   </Card>

@@ -5,7 +5,7 @@ import "./Resume.css"
 function Resume(props){
   return (
 
-    <div><h3 className="HeaderRes fluid">Resume Helper</h3>
+    <div><h3 id="resume" className="HeaderRes fluid">Resume Helper</h3>
 <Container>
   <Row>
     <Col><Card style={{ width: '18rem' }}>
