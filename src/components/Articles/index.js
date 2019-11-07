@@ -6,7 +6,6 @@ import "./index.css"
 function ArticleAccordian(props){
   return (
 
-
 <Container>
   <Row>
 
@@ -46,8 +45,8 @@ function ArticleAccordian(props){
 
     <Card.Body className="CardBody1 fluid">
 <ul>
-  <li><a href="https://medium.com/@adriennedomingus/technical-interview-tips-for-bootcamp-grads-55f5274295ac">Technical Interview Tips For Bootcamp Grads</a
-  ><button>Save</button></li>
+  <li><a href="https://medium.com/@adriennedomingus/technical-interview-tips-for-bootcamp-grads-55f5274295ac">Technical Interview Tips For Bootcamp Grads</a>
+  <button>Save</button></li>
   <li><a href="https://techcrunch.com/2015/11/21/having-success-with-code-bootcamps-a-guide-for-employers-and-bootcamp-grads/">Having Success With Code Bootcamps: A Guide For Employers And Bootcamp Grads</a>
   <button>Save</button></li>
   <li><a href="https://sylviafronczak.com/2019/02/25/github-tips-for-bootcamp-grads/">GitHub Tips For Bootcamp Grads</a>
@@ -55,6 +54,7 @@ function ArticleAccordian(props){
 
 </ul> 
 </Card.Body>
+
     </Accordion.Collapse>
   </Card>
   <Card>
@@ -86,7 +86,7 @@ function ArticleAccordian(props){
       <Accordion.Toggle as={Button} variant="link" eventKey="3" className="Button3 fluid">
         New in Software Development
       </Accordion.Toggle>
-    </Card.Header >
+    </Card.Header>
     <Accordion.Collapse eventKey="3">
       <Card.Body className="CardBody3 fluid">
       <ul>
@@ -96,7 +96,6 @@ function ArticleAccordian(props){
   <button>Save</button></li>
   <li><a href="https://www.deekit.com/the-top-developer-communities-which-are-you-not-visiting/">THE TOP DEVELOPER COMMUNITIES – WHICH ARE YOU NOT VISITING?</a>
   <button>Save</button></li>
-
 </ul> 
       </Card.Body>
     </Accordion.Collapse>
