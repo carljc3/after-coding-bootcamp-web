@@ -21,5 +21,3 @@ export default {
     return axios.get(`${url}/checkloggedinuser`,{withCredentials:true})
   }
 };
-
-};

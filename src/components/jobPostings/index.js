@@ -88,18 +88,7 @@ class JobPostings extends Component {
     event.preventDefault();
     
   };
-  favoriteThingHandler = (data,type)=>{
-    if(type==='job'){
-      //save to jobs array
-      this.setState({black: !this.state.black})
-    } else if(type==="video"){
-      //save to video array
-    }
-    else if(type==="articles"){
-    //save to articles array
-    }
-    console.log(data,type)
-  }
+
 //   changeColor(){
 //     this.setState({black: !this.state.black})
 //  }
@@ -116,7 +105,7 @@ class JobPostings extends Component {
                 //     <h1>How to Apply: {posting.apply_url} </h1>
                 // </div>)
 
-                return <JobCard job={posting}/>
+                // return <JobCard job={posting}/>
              })
          }
      </div>
@@ -125,7 +114,3 @@ class JobPostings extends Component {
 }
 
 export default JobPostings;
-
-// <i class="fa fa-star fa-2x"></i> <---filled
-
-// <i class="fa fa-star-o fa-2x"></i> <---unfilled

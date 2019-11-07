@@ -20,3 +20,21 @@ export default class FavoriteButton extends React.Component {
     )
 }
 }
+    favoriteThingHandler = (data,type)=>{
+    if(type==='job'){
+      //save to jobs array
+      this.setState({black: !this.state.black})
+    } else if(type==="video"){
+      //save to video array
+      this.setState({black: !this.state.black})
+    } else if(type==="articles"){
+      //save to articles array
+      this.setState({black: !this.state.black})
+    }
+    console.log(data,type)
+  }
+
+// <i class="fa fa-star fa-2x"></i> <---filled
+
+// <i class="fa fa-star-o fa-2x"></i> <---unfilled
+
