@@ -3,8 +3,6 @@ import { Card, ListGroup, ListGroupItem, Button, Container, Col, Row } from 'rea
 import "../styles/Portfolio.css"
 import API from '../components/utils/API.js'
 
-export alreadyLiked from '../components/FavoriteButton/index.js'
-
 export default class Portfolio extends Component {
   state={
     user:{
@@ -19,23 +17,6 @@ export default class Portfolio extends Component {
       console.log(err.response)
     })
   }
-  //-------------------------------------------------------------------
-//FAVORITE LIKES COMPONENT
-// if(alreadyLiked == true){
-
-//   const imageLikedBy = { "userId": userId }
-//   const interaction = await this.state.white?( { _id: this.state.username.user }, { $pull: { likedBy: imageLikedBy }, $inc: { likes: -1 } } )
-//   return interaction
-// }
-// else{
-
-//   const imageLikedBy = { "userId": userId, "datetime": new Date() }
-//   const interaction = await this.state.black?.updateOne( { _id: this.state.username.user }, { $push: { likedBy: imageLikedBy }, $inc: { likes: 1 } } )
-
-//   return interaction
-
-// }
-//-------------------------------------------------------------------------
 
   render() {
     return (

@@ -11,28 +11,28 @@ export default class FavoriteButton extends React.Component {
             black:!this.state.black
         })
     }
-    render(){
+    favoriteThingHandler = (data,type)=>{
+      if(type==='job'){
+        //save to jobs array
+        this.setState({black: !this.state.black})
+      } else if(type==="video"){
+        //save to video array
+        this.setState({black: !this.state.black})
+      } else if(type==="articles"){
+        //save to articles array
+        this.setState({black: !this.state.black})
+      }
+      console.log(data,type)
+    }
 
-        return (
-            <button className={this.state.black?"blackButton":"whiteButton"} onClick={this.handleAnotherClick}>
+    render(){
+    
+     return (
+      <button className={this.state.black?"blackButton":"whiteButton"} onClick={this.handleAnotherClick}>
             {this.state.black?<i className="fa fa-star fa-2x"> Save to Favorites</i>:<i className="fa fa-star-o fa-2x"> Save to Favorites</i>}
         </button>
-    )
-}
-}
-    favoriteThingHandler = (data,type)=>{
-    if(type==='job'){
-      //save to jobs array
-      this.setState({black: !this.state.black})
-    } else if(type==="video"){
-      //save to video array
-      this.setState({black: !this.state.black})
-    } else if(type==="articles"){
-      //save to articles array
-      this.setState({black: !this.state.black})
-    }
-    console.log(data,type)
-  }
+    )}}
+      
 
 // <i class="fa fa-star fa-2x"></i> <---filled
 
