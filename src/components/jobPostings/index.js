@@ -16,25 +16,25 @@ class JobPostings extends Component {
       "relocation_assistance": 0,
       "telecommuting": 1,
       "category": {
-          "id": "4",
-          "name": "Front-end Engineering"
+        "id": "4",
+        "name": "Front-end Engineering"
       },
       "type": {
-          "id": "1",
-          "name": "Full-time"
+        "id": "1",
+        "name": "Full-time"
       },
       "company": {
-          "id": "brandyourself",
-          "name": "BrandYourself",
-          "url": "http://www.brandyourself.com",
-          "type": null,
-          "logo": "https://d2fcz5no062gar.cloudfront.net/logos/brandyourself_1350583632.png"
+        "id": "brandyourself",
+        "name": "BrandYourself",
+        "url": "http://www.brandyourself.com",
+        "type": null,
+        "logo": "https://d2fcz5no062gar.cloudfront.net/logos/brandyourself_1350583632.png"
       },
       "keywords": "your,company,team,fullstack,online,engineering,developer,technical,media,other,office,lancaster,about,reputation,their,information,join,have,services,software,role,work,responsibilitiesown,maintaining,deploying,documentingcollaborate,testing,development,d",
       "apply_url": "http://careers.brandyourself.com/apply/esmMD51Tqw/Full-Stack-Developer",
       "url": "https://authenticjobs.com/jobs/31701/full-stack-developer"
-  },
-  {
+    },
+    {
       "id": "31689",
       "title": "Experienced Web Developer - Join a small talented team",
       "description": "<p><p><span style=\"color: #151b26; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;\"><span style=\"font-size: 13px; white-space: pre-wrap;\"><strong>Confluent Design is seeking an experienced web developer</strong> for regular contract work on a Processwire (PHP) based website, several Rails apps, and potential api and js integrations with other platforms. Solid experience with Git, Rails, JavaScript, and PHP is required. The job will include reviewing and updating existing web sites and applications, as well as collaborating on strategy and roadmaps for future development. </span></span></p>\n<p><span style=\"color: #151b26; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;\"><span style=\"font-size: 13px; white-space: pre-wrap;\">You will be working closely with our talented team lead (an experienced front end designer and HTML/CSS author) to implement new features and entirely new applications in a highly collaborative environment. We expect the usual task load to require approximately 20 hours per week. </span></span></p>\n<p><span style=\"color: #151b26; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;\"><span style=\"font-size: 13px; white-space: pre-wrap;\"><strong>Bonus points for experience with:</strong> Processwire, Marketo, FormAssembly, SalesForce, SquareSpace, Luminate Online, and Asana. </span></span></p>\n<p><span style=\"color: #151b26; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;\"><span style=\"font-size: 13px; white-space: pre-wrap;\"><strong>About Confluent Design</strong> We are a small group of creative professionals who are passionate about creating engaging, accessible, high performance websites and web applications for good causes that help people. Currently, we primarily serve a nonprofit supporting veterans and their families. We would like to find someone to grow with us and lead our web programming efforts.</span></span></p></p>",
@@ -44,25 +44,25 @@ class JobPostings extends Component {
       "relocation_assistance": 0,
       "telecommuting": 1,
       "category": {
-          "id": "2",
-          "name": "Back-end Engineering"
+        "id": "2",
+        "name": "Back-end Engineering"
       },
       "type": {
-          "id": "5",
-          "name": "Part-time"
+        "id": "5",
+        "name": "Part-time"
       },
       "company": {
-          "id": "confluentdesignllc",
-          "name": "Confluent Design LLC",
-          "url": "http://confluentdesign.com",
-          "type": null,
-          "logo": "https://d2fcz5no062gar.cloudfront.net/assets/images/defaults/company-blank.png",
-          "tagline": "Helping nonprofits excel on the web"
+        "id": "confluentdesignllc",
+        "name": "Confluent Design LLC",
+        "url": "http://confluentdesign.com",
+        "type": null,
+        "logo": "https://d2fcz5no062gar.cloudfront.net/assets/images/defaults/company-blank.png",
+        "tagline": "Helping nonprofits excel on the web"
       },
       "keywords": "experienced,applications,rails,lead,about,small,experience,php,processwire,developer,will,design,confluent,team,talented,passionate,creating,professionals,creative,group,asana,hours,online,luminate,squarespace,engaging,formassembly,marketo,points,bonus",
       "apply_url": "http://mailto:jared@confluentdesign.com",
       "url": "https://authenticjobs.com/jobs/31689/experienced-web-developer-join-a-small-talented-team"
-  }],
+    }],
     black: true
   };
 
@@ -72,7 +72,7 @@ class JobPostings extends Component {
 
   loadJobPostings = () => {
     API.getJobPostings()
-      .then(res =>{
+      .then(res => {
         console.log('getJobPostings res', res.data)
       })
       .catch(err => console.log(err));
@@ -86,31 +86,29 @@ class JobPostings extends Component {
   };
 
   handleFormSubmit = event => {
+    this.props.clickHandler(this.props.data, this.props.whereToSave);
     event.preventDefault();
-    Axios.post("/api/savearticle" )
-
-    
-    
+    Axios.post("/api/savearticle")
   };
 
-//   changeColor(){
-//     this.setState({black: !this.state.black})
-//  }
+  //   changeColor(){
+  //     this.setState({black: !this.state.black})
+  //  }
   render() {
     let btn_class = this.state.black ? "blackButton" : "whiteButton";
     return (
-     <div className="JobPosting">
-         {
-             this.state.JobPostings.map(posting =>{
+      <div className="JobPosting">
+        {
+          this.state.JobPostings.map(posting => {
 
-                  return (
-                 <div className= "container">
-                     <h3>Title: {posting.title}</h3>
-                     <h1>How to Apply: {posting.apply_url} </h1>
-                 </div>)
-             })
-         }
-     </div>
+            return (
+              <div className="container">
+                <h3>Title: {posting.title}</h3>
+                <h1>How to Apply: {posting.apply_url} </h1>
+              </div>)
+          })
+        }
+      </div>
     );
   }
 }
