@@ -5,8 +5,8 @@ const url = "http://localhost:3030"
 export default {
   // Gets all jobs
   getJobPostings: function() {
-
     return axios.get(`${url}/api/jobPostings`);
+
   },
   logMeIn: function(user) {
     return axios.post(`${url}/login`,user,{withCredentials:true})
@@ -20,7 +20,6 @@ export default {
   getLoggedInUser:function(){
     return axios.get(`${url}/checkloggedinuser`,{withCredentials:true})
   }
-
 };
 
-
+};
