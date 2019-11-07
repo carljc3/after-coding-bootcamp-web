@@ -4,7 +4,8 @@ import "./Resume.css"
 
 function Resume(props){
   return (
-     <div><h3>Resume Helpers</h3>
+    <div><h3 className="HeaderRes fluid">Resume Helper</h3>
+
 <Container>
   <Row>
     <Col> <Accordion className="Accordion fluid">
@@ -78,6 +79,7 @@ function Resume(props){
   </Row>
 </Container>
 </div>
+
   )
 }
 

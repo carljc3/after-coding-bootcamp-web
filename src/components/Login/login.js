@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import API from "../utils/API";
+import axios from "axios";
+import { Redirect } from "react-router-dom";
 
 
 
@@ -7,27 +9,50 @@ export default class Login extends Component {
   state = {
       isShown: false,
       email: '',
-      password: '',
-      user: "",
+      username: "",
+      password: "",
       loggedInUser: '',
       redirect: false,
-      modalClasses : "modal d-block"
+      modalClasses : "modal d-block",
   };
-  handleInputChange = event => {
-      const { name, value } = event.target;
-      this.setState({
-          [name]: value
-      });
-  };
-  handleFormSubmit = event => {
-      event.preventDefault();
 
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
   };
+
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    API.logMeIn({
+      username:this.state.username,
+      password:this.state.password
+    }).then(data=>{
+      console.log(data)
+      this.setState ({
+        redirect: true
+      })
+    })
+  };
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+        return <Redirect to='/portfolio' />
+    }
+}
+
+
   hideModal = ()=>{
     this.setState({
       modalClasses :'modal fade'
     })
   }
+
   render() {
       return (
           <div>
@@ -42,11 +67,13 @@ export default class Login extends Component {
                               </button>
                           </div>
                           <div className="modal-body modal-open mx-3">
-                          <h5 className="text-center">Login to your Chef account</h5>
+
+                          <h5 className="text-center">Login to your account</h5>
                               <div className="md-form mb-5">
                                   {/* <i className="fas fa-user prefix grey-text"></i> */}
-                                  <label data-error="wrong" data-success="right" htmlFor="form34">Email</label>
-                                  <input type="email" required name="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="" />
+                                  <label data-error="wrong" data-success="right" htmlFor="form34">Username</label>
+                                  <input type="text" required name="username" value={this.state.username} onChange={this.handleInputChange} className="form-control" placeholder="" />
+
                                   <br />
                                   {/* <i className="fas fa-lock"></i> */}
                                   <label data-error="wrong" data-success="right" htmlFor="form34">Password</label>
@@ -54,12 +81,18 @@ export default class Login extends Component {
                               </div>
                           </div>
                           <div className="modal-footer d-flex justify-content-center">
+
+   
                               <button onClick={this.handleFormSubmit} data-dismiss="modal" className="login-btn btn btn-info my-4 btn-block" type="submit">Log In</button>
+
                           </div>
                       </div>
                   </div>
               </div>
+
+              {this.renderRedirect()};
           </div>
       )
   }
 }
+

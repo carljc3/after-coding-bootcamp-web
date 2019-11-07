@@ -17,6 +17,10 @@ h2{
   /* margin-left: -154px; */
 }
 
+a:hover {
+  background-color: aquamarine;
+  background-blend-mode: luminosity;
+}
 
 .Icon1,.Icon2,.Icon3,.Icon4,.Icon5,.Icon6{
   width:70px;
