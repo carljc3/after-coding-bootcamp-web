@@ -4,7 +4,7 @@ import axios from "axios";
 import { Redirect } from "react-router-dom";
 
 
-export default class Login extends Component {
+export default class Signup extends Component {
   state = {
       isShown: false,
       email: '',
@@ -21,6 +21,7 @@ export default class Login extends Component {
           [name]: value
       });
   };
+  
   handleFormSubmit = event => {
       event.preventDefault();
       API.logMeIn({

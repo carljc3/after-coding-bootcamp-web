@@ -19,6 +19,9 @@ export default {
   },
   getLoggedInUser:function(){
     return axios.get(`${url}/checkloggedinuser`,{withCredentials:true})
+  },
+  getSavedFavorites:function(){
+    return axios.get(`${url}/savedfavorites`,{withCredentials:true})
   }
 };
 
