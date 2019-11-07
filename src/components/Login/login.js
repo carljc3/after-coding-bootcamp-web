@@ -3,6 +3,10 @@ import API from "../utils/API";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 33fdc13543026afa949c8dcf96de437a48487efa
 export default class Login extends Component {
   state = {
     isShown: false,
@@ -44,8 +48,12 @@ export default class Login extends Component {
     }
   }
 
+<<<<<<< HEAD
 
   hideModal = () => {
+=======
+  hideModal = ()=>{
+>>>>>>> 33fdc13543026afa949c8dcf96de437a48487efa
     this.setState({
       modalClasses: 'modal fade'
     })
@@ -93,4 +101,3 @@ export default class Login extends Component {
     )
   }
 }
-
