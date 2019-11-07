@@ -4,7 +4,6 @@ import axios from "axios";
 import { Redirect } from "react-router-dom";
 
 
-<<<<<<< HEAD
 export default class Login extends Component {
     state = {
         isShown: false,
@@ -32,35 +31,6 @@ export default class Login extends Component {
             this.setState({
                 redirect: true
             })
-=======
-export default class Signup extends Component {
-  state = {
-      isShown: false,
-      email: '',
-      password: '',
-      user: "",
-      loggedInUser: '',
-      redirect: false,
-      modalClasses : "modal d-block"
-  };
-  
-  handleInputChange = event => {
-      const { name, value } = event.target;
-      this.setState({
-          [name]: value
-      });
-  };
-  
-  handleFormSubmit = event => {
-      event.preventDefault();
-      API.logMeIn({
-        username:this.state.username,
-        password:this.state.password
-      }).then(data=>{
-        console.log(data)
-        this.setState ({
-          redirect: true
->>>>>>> 33fdc13543026afa949c8dcf96de437a48487efa
         })
     };
 
