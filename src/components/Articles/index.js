@@ -13,7 +13,11 @@ function ArticleAccordian(props){
     <Accordion className="Accordion fluid">
   <Card className="Card fluid">
     <Card.Header className="CardHeader fluid">
+
+      <Accordion.Toggle style={{color:"white"}} as={Button} variant="link" eventKey="0" className="Button0 fluid">
+
       <Accordion.Toggle as={Button} variant="link" eventKey="0" className="Button0 fluid">
+
 
         Job Reviews
       </Accordion.Toggle>
@@ -37,7 +41,11 @@ function ArticleAccordian(props){
   <Card>
 
     <Card.Header className="CardHeader1 fluid">
+
+      <Accordion.Toggle style={{color:'white'}} as={Button} variant="link" eventKey="1" className="Button1 fluid">
+
       <Accordion.Toggle as={Button} variant="link" eventKey="1" className="Button1 fluid">
+
 
        Tips for Bootcamp Grads
       </Accordion.Toggle>
@@ -61,7 +69,11 @@ function ArticleAccordian(props){
   <Card>
 
     <Card.Header className="CardHeader2 fluid">
+
+      <Accordion.Toggle style={{color:'white'}} as={Button} variant="link" eventKey="2" className="Button3 fluid">
+
       <Accordion.Toggle as={Button} variant="link" eventKey="2" className="Button3 fluid">
+
 
        Continuing Education
       </Accordion.Toggle>
@@ -84,7 +96,7 @@ function ArticleAccordian(props){
   <Card className="Card fluid">
 
     <Card.Header className="CardHeader3 fluid">
-      <Accordion.Toggle as={Button} variant="link" eventKey="3" className="Button3 fluid">
+      <Accordion.Toggle style={{color:'white'}} as={Button} variant="link" eventKey="3" className="Button3 fluid">
         New in Software Development
       </Accordion.Toggle>
     </Card.Header>
