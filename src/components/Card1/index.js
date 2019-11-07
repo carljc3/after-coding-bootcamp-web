@@ -29,7 +29,13 @@ function cards(props) {
   </Col>
   <Col className="text-center"
      ><a href="/">
-  <Image src="https://i.imgur.com/tWIF949.png" className="Icon4" /></a>
+  <Image src="https://i.imgur.com/K5qfgGN.png" className="Icon5" /></a>
+  <br></br>
+  <p>Current job postings in your field.</p>
+  </Col>
+  <Col className="text-center"
+     ><a href="/">
+  <Image src="https://i.imgur.com/tWIF949.png" className="Icon6" /></a>
   <br></br>
   <p>Last but not least a secure profile for you to store all your relevant information.</p>
   </Col>
