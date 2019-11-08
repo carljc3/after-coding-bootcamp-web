@@ -13,15 +13,14 @@ class YoutubePostings extends Component {
 
   loadYoutube = () => {
     API.getYouTube()
-      .then(res =>{
 
+      .then(res =>
         this.setState({ YoutubePosting: res.data.items })
-        console.log(res.data);
-      }
         
       )
       .catch(err => console.log(err));
   };
+
 
   handleInputChange = event => {
     const { name, value } = event.target;

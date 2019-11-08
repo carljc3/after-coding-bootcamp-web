@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar, Nav, Button} from "react-bootstrap";
 import Login from "./Login/login.js";
-import Signup from "./SignUp/"
+import Signup from "./Signup"
 import '../styles/NavBar.css';
 
 
@@ -9,6 +9,7 @@ class NavDropdownExample extends React.Component {
   state={
     showLogin:false,
     showSignup:false
+
   }
   showLogin = ()=>{
     this.setState({
@@ -31,23 +32,24 @@ class NavDropdownExample extends React.Component {
     })
   }
    handleSelect = eventKey => alert(`selected ${eventKey}`);
+
   render(){
     return (
 
     <Navbar  className="Navbar fluid" collapseOnSelect expand="lg" >
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
+            <a href="/">
       <img
         src="https://i.imgur.com/11Agt4k.png"
         width="60"
         height="60"
         className="d-inline-block align-top"
         alt="acbc logo"
-      />
+      /></a>
     </Navbar.Brand>
     <Navbar.Brand  className="NavbarBrand fluid" href="#home">After Coding Bootcamp</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
-  
       <Nav  className="Nav fluid">
       <span onClick={this.showSignup}>
       <Button  className="Button fluid" variant="success">Sign Up</Button>
@@ -66,6 +68,5 @@ class NavDropdownExample extends React.Component {
   );
 }
 }
-
 
 export default NavDropdownExample;
