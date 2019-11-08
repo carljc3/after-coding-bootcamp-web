@@ -9,11 +9,9 @@ export default function JobCard(props) {
   return (
 
       <h3 className="JobTitle">{props.job.title}</h3>
-      <a className="Link" href={props.job.apply_url}>apply here!</a>
-      <p></p>
 
-      <h3>{props.job.title}</h3>
-      <a href={props.job.apply_url}>apply here!</a>
+      <a className="ApplyHere" href={props.job.apply_url}>Apply Here</a>
+      <button className="SaveJob">Save Job</button>
 
     </div>
 
