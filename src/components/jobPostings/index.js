@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import FavoriteButton from '../FavoriteButton'
 import "./style.css";
-
+import JobCard from "../JobCard"
 class JobPostings extends Component {
   state = {
     JobPostings: [{

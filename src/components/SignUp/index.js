@@ -41,26 +41,6 @@ export default class Signup extends Component {
     }
 }
 
-export default class Login extends Component {
-  state = {
-      isShown: false,
-      email: '',
-      password: '',
-      user: "",
-      loggedInUser: '',
-      redirect: false,
-      modalClasses : "modal d-block"
-  };
-  handleInputChange = event => {
-      const { name, value } = event.target;
-      this.setState({
-          [name]: value
-      });
-  };
-  handleFormSubmit = event => {
-      event.preventDefault();
-
-  };
   hideModal = ()=>{
     this.setState({
       modalClasses :'modal fade'
