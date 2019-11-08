@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar, Nav, Button} from "react-bootstrap";
 import Login from "./Login/login.js";
-import Signup from "./Signup"
+import Signup from "./SignUp"
 import '../styles/NavBar.css';
 
 

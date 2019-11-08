@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import FavoriteButton from '../FavoriteButton'
 import "./style.css";
-
+import JobCard from "../JobCard"
 class JobPostings extends Component {
   state = {
     JobPostings: [{
@@ -109,12 +109,6 @@ class JobPostings extends Component {
      <div className="JobPosting">
          {
              this.state.JobPostings.map(posting =>{
-
-                //  return (
-                // <div className= "container">
-                //     <h3>Title: {posting.title}</h3>
-                //     <h1>How to Apply: {posting.apply_url} </h1>
-                // </div>)
 
                 return <JobCard job={posting}/>
              })
