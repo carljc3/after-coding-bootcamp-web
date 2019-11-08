@@ -1,0 +1,39 @@
+.FooterHead{
+  background-color: transparent;
+  border: none;
+  
+
+}
+
+.CardBodyFooter{
+  text-align: center;
+  color:#00c991;
+  font-family: 'Staatliches', cursive;
+  font-size: 28px;
+  text-shadow: 1px 1px 1px grey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.FooterImg{
+  height: 300px;
+}
+
+.Ptag{
+  color:grey;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 17px;
+  text-shadow: 0px 0px 0px grey;
+}
+
+.PtagACBC{
+  color:#f1c145;
+}
+
+/* .ContactButtons{ */
+  /* color:whitesmoke;
+  background-color:#f1c145;
+  border-radius:50px;
+  font-size:18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+} */
