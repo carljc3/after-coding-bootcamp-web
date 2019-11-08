@@ -24,7 +24,7 @@ export default class Signup extends Component {
   
   handleFormSubmit = event => {
       event.preventDefault();
-      API.logMeIn({
+      API.signUp({
         username:this.state.username,
         password:this.state.password
       }).then(data=>{

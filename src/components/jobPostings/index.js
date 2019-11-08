@@ -38,12 +38,6 @@ class JobPostings extends Component {
          {
              this.state.JobPostings.map(posting =>{
 
-                //  return (
-                // <div className= "container">
-                //     <h3>Title: {posting.title}</h3>
-                //     <h1>How to Apply: {posting.apply_url} </h1>
-                // </div>)
-
                 return <JobCard job={posting}/>
              })
          }
