@@ -11,6 +11,7 @@ import JumboTwo from "../components/Jumbo2/Jumbo2"
 import YoutubePostings from "../components/Youtube";
 
 import Login from "../components/Login/login.js"
+import Footer from "../components/Footer"
 
 
 
@@ -44,6 +45,8 @@ export default class Home extends React.Component {
       <h3 className="JobsHeader">Jerbs</h3>
       <JobPostings/>
       {/* <YoutubePostings/> */}
+
+      <Footer/>
 
   
    </div>
