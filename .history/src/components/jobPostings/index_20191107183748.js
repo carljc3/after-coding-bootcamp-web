@@ -91,15 +91,19 @@ class JobPostings extends Component {
   handleFormSubmit = event => {
     this.props.clickHandler(this.props.data, this.props.whereToSave);
     event.preventDefault();
-    Axios.post("/api/savedJobs")
+    Axios.post("/api/savearticle")
   };
 
+  //   changeColor(){
+  //     this.setState({black: !this.state.black})
+  //  }
   render() {
     let btn_class = this.state.black ? "blackButton" : "whiteButton";
     return (
       <div className="JobPosting">
         {
           this.state.JobPostings.map(posting => {
+
             return (
               <div>
                 <h3 className="JobTitle">{posting.title}</h3>

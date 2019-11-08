@@ -14,9 +14,7 @@ export default class FavoriteButton extends React.Component {
       user: this.props.user
     }
 
-    // this.props.clickHandler(this.props.data, this.props.whereToSave);
-    // event.preventDefault();
-    Axios.post("http://localhost:3030/api/savearticle", postBody)
+    Axios.post("http://localhost:3030/api/savedJobs", postBody)
     this.setState({
       black: !this.state.black
     })
@@ -36,6 +34,9 @@ export default class FavoriteButton extends React.Component {
     console.log(data, type)
   }
 
+
+
+  
   render() {
     console.log('~~~~~~~~~~~~~~~')
     console.log(this.props)

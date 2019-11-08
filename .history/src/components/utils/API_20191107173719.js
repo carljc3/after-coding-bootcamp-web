@@ -3,18 +3,12 @@ import axios from "axios";
 const url = "http://localhost:3030"
 
 export default {
-
+  // Gets all jobs
   getJobPostings: function () {
-    return axios.get(`${url}/api/savedJobs`);
+    return axios.get(`${url}/api/jobPostings`);
   },
   saveJobPosting: function (article) {
-    return axios.post(`${url}/api/savedJobs`, article)
-  },
-  getYouTubeVIDEOS: function () {
-    return axios.get(`${url}/api/YouTubeVIDEOS`);
-  },
-  saveYouTubeVIDEOS: function (article) {
-    return axios.post(`${url}/api/YouTubeVIDEOS`, article)
+    return axios.post(`${url}/api/savearticle`, article)
   },
   logMeIn: function (user) {
     return axios.post(`${url}/login`, user, { withCredentials: true })
