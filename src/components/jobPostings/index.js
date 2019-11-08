@@ -63,7 +63,10 @@ class JobPostings extends Component {
       "apply_url": "http://mailto:jared@confluentdesign.com",
       "url": "https://authenticjobs.com/jobs/31689/experienced-web-developer-join-a-small-talented-team"
     }],
-    black: true
+    black: true,
+    // todo: get logged in user
+    user: { id: "5dc34323b2fa5905a5fea45d", name: "J-Anne" }
+
   };
 
   componentDidMount() {
@@ -102,10 +105,13 @@ class JobPostings extends Component {
           this.state.JobPostings.map(posting => {
 
             return (
-              <div className="container">
-                <h3>Title: {posting.title}</h3>
-                <h1>How to Apply: {posting.apply_url} </h1>
-              </div>)
+              <div>
+                <h3 className="JobTitle">{posting.title}</h3>
+                <a className="Link" href={posting.apply_url}>Apply Here!</a>
+                <FavoriteButton title={posting.title} link={posting.apply_url} user={this.state.user} />
+              </div>
+
+            )
           })
         }
       </div>

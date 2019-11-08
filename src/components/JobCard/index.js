@@ -1,21 +1,18 @@
 import React from 'react';
-
-
 import './style.css'
-import { Container } from 'react-bootstrap';
-
+import { Container, FormText } from 'react-bootstrap';
 
 export default function JobCard(props) {
-  return (
 
-      <h3 className="JobTitle">{props.job.title}</h3>
-      <a className="Link" href={props.job.apply_url}>apply here!</a>
+
+  return (
+    <div>
+      <h3 className="JobTitle">{"TITLE"}</h3>
+      <a className="Link" href={"URL"}>apply here!</a>
       <p></p>
 
-      <h3>{props.job.title}</h3>
-      <a href={props.job.apply_url}>apply here!</a>
-
+      <h3>{"TITLE"}</h3>
+      <a href={"URL"}>apply here!</a>
     </div>
-
   )
 }
