@@ -2,8 +2,26 @@
   display: inline-block;
   overflow: scroll;
   width: 20vw;
-  height: 200px;
-  border: 1px solid purple;
-  box-shadow: 5px 5px 8px salmon;
+  height: 100px;
+  /* border: .05px solid black; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   margin: 12px;
+  border-radius: 25px;
+  text-align: center;
 }
+
+.JobTitle{
+  color: #b7d0e3;
+  text-shadow: 0.5px 1px 1px #588bbe;
+  font-size: 20px;
+}
+
+a.ApplyHere{
+  color:black;
+  
+}
+
+button.SaveJob{
+  color:salmon;
+}
+
