@@ -13,6 +13,7 @@ text-align: center;
 
 
 
+
 }
 
 div.accordion > div.card{
@@ -25,4 +26,11 @@ div.CardHeader4.fluid.card-header, div.CardHeader5.fluid.card-header, div.CardHe
   /* border:0.07px solid black; */
   /* border-radius: 45px; */
   
+}
+
+.Button00, .Button11, .Button33{
+  color: #7fbbe5;
+  font-family: 'Staatliches', cursive;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px grey;
 }

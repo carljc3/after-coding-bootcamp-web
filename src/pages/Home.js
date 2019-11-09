@@ -12,7 +12,7 @@ import YoutubePostings from "../components/Youtube";
 
 import Login from "../components/Login/login.js"
 import Footer from "../components/Footer"
-
+import CatPic from "../components/CatPic"
 
 
 export default class Home extends React.Component {
@@ -42,11 +42,13 @@ export default class Home extends React.Component {
       <Resume/>
       <JumboTwo/>
 
-      <h3 className="JobsHeader">Jerbs</h3>
+      <h3 className="JobsHeader">Job Postings</h3>
       <JobPostings/>
+      <CatPic/>
       {/* <YoutubePostings/> */}
 
       <Footer/>
+      
 
   
    </div>
