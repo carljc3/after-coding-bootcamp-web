@@ -8,21 +8,22 @@ import VideoCard from "../components/VideoCard"
 import ResumeCard from "../components/ResumeCard"
 
 export default class Portfolio extends Component {
-  state={
-    user:{
-      username:"fakename"
+  state = {
+    user: {
+      username: "fakename"
     }
   }
 
-  componentDidMount(){
-    API.getLoggedInUser().then(res=>{
+
+  componentDidMount() {
+    API.getLoggedInUser().then(res => {
       console.log(res.data)
-      this.setState({user:res.data})
-    }).catch(err=>{
+      this.setState({ user: res.data })
+    }).catch(err => {
       console.log(err.response)
     })
   }
-  
+
   render() {
     return (
       <Container>
@@ -45,67 +46,69 @@ export default class Portfolio extends Component {
             </Card>
           </Col>
           <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-    <Card.Body>
-    <Card.Title>Saved Jobs</Card.Title>
-      <Card.Text>
-      {this.state.user.savedJobs && this.state.user.savedJobs.map(job=>{
-    return <JobCard job={job}/>
-    })
-}
-      </Card.Text>
-      <Button variant="secondary" >Unsave</Button>
-    </Card.Body>
-  </Card>
+            <Card>
+              <Card.Img variant="top" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+              <Card.Body>
+                <Card.Title>Saved Jobs</Card.Title>
+                <Card.Text>
+                  {this.state.user.savedJobs && this.state.user.savedJobs.map(job => {
+                    return <JobCard job={job} />
+                  })
+                  }
+                </Card.Text>
+                <Button variant="secondary" >Unsave</Button>
+              </Card.Body>
+            </Card>
           </Col>
           <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1476242906366-d8eb64c2f661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-    <Card.Body>
-    <Card.Title>Saved Articles</Card.Title>
-      <Card.Text>
-      {this.state.user.favoriteArticles && this.state.user.favoriteArticles.map(article=>{
-    return <ArtCard article={article}/>
-    })
-}
-      </Card.Text>
-      <Button variant="secondary" >Unsave</Button>
-    </Card.Body>
-  </Card>
+            <Card>
+              <Card.Img variant="top" src="https://images.unsplash.com/photo-1476242906366-d8eb64c2f661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+              <Card.Body>
+                <Card.Title>Saved Articles</Card.Title>
+                <Card.Text>
+                  {this.state.user.favoriteArticles && this.state.user.favoriteArticles.map(article => {
+                    return <ArtCard article={article} />
+                  })
+                  }
+                </Card.Text>
+                <Button variant="secondary" >Unsave</Button>
+              </Card.Body>
+            </Card>
           </Col>
           <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-    <Card.Body>
-    <Card.Title>Saved Resumes</Card.Title>
-      <Card.Text>
-      {this.state.user.favoriteResumes && this.state.user.favoriteResumes.map(resume=>{
-    return <ResumeCard resume={resume}/>
-    })
-}
-      </Card.Text>
-      <Button variant="secondary" >Unsave</Button>
-    </Card.Body>
-  </Card>
+            <Card>
+              <Card.Img variant="top" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+              <Card.Body>
+                <Card.Title>Saved Resumes</Card.Title>
+                <Card.Text>
+                  {this.state.user.favoriteResumes && this.state.user.favoriteResumes.map(resume => {
+                    return <ResumeCard resume={resume} />
+                  })
+                  }
+                </Card.Text>
+                <Button variant="secondary" >Unsave</Button>
+              </Card.Body>
+            </Card>
           </Col>
           <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1541877944-ac82a091518a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-    <Card.Body>
-    <Card.Title>Saved Videos</Card.Title>
-      <Card.Text>
-      {this.state.user.favoriteVideos && this.state.user.favoriteVideos.map(video=>{
-    return <VideoCard video={video}/>
-    })
-}
-      </Card.Text>
-      <Button variant="secondary" >Unsave</Button>
-    </Card.Body>
-  </Card>
+            <Card>
+              <Card.Img variant="top" src="https://picsum.photos/50/50/?blur" />
+              <Card.Body>
+                <Card.Title>Saved Videos</Card.Title>
+                <Card.Text>
+                  {this.state.user.favoriteVideos && this.state.user.favoriteVideos.map(video => {
+                    return <VideoCard video={video} />
+                  })
+                  }
+                </Card.Text>
+                <Button variant="secondary" >Unsave</Button>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
       </Container>
+
+
     )
   }
 }

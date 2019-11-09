@@ -6,8 +6,8 @@ import { Container } from 'react-bootstrap';
 export default function VideoCard(props) {
   return (
     <div className="VideoCard">
-      <h3>{props.job.title}</h3>
-      <a href={props.job.apply_url}>apply here!</a>
+      <h3>{props.video.title}</h3>
+      <a href={props.video.link}>apply here!</a>
 
       <p>Make it to the carpet before i vomit mmmmmm somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of shock or fall over dead (not really but gets sypathy) you have cat to be kitten me right meow poop on grasses. Catto munch salmono steal the warm chair right after you get up. Sleep on keyboard pose purrfectly to show my beauty and fight own tail yet i show my fluffy belly but it's a trap! if you pet it i will tear up your hand for walk on car leaving trail of paw prints on hood and windshield or it's 3am, time to create some chaos shake treat bag. Catty ipsum i'm bored inside, let me out i'm lonely outside, let me in i can't make up my mind whether to go in or out, guess i'll just stand partway in and partway out, contemplating the universe for half an hour how dare you nudge me with your foot?!?! leap into the air in greatest offense! but sit on human they not getting up ever. It's 3am, time to create some chaos murr i hate humans they are so annoying yet playing with balls of wool yet slap kitten brother with paw but crash against wall but walk away like nothing happened sit on human they not getting up ever. White cat sleeps on a black shirt hunt anything that moves. Flee in terror at cucumber discovered on floor all of a sudden cat goes crazy, the fat cat sat on the mat bat away with paws and sleep on dog bed, force dog to sleep on floor so claw drapes. Chase mice. Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good drool.
 

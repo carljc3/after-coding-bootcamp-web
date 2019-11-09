@@ -4,22 +4,25 @@ const url = "http://localhost:3030"
 
 export default {
   // Gets all jobs
-  getJobPostings: function() {
+  getJobPostings: function () {
     return axios.get(`${url}/api/jobPostings`);
-
   },
-  logMeIn: function(user) {
-    return axios.post(`${url}/login`,user,{withCredentials:true})
+  saveJobPosting: function (article) {
+    return axios.post(`${url}/api/savearticle`, article)
   },
-  signUp: function(user) {
-    return axios.post(`${url}/signup`,user,{withCredentials:true})  
+  logMeIn: function (user) {
+    return axios.post(`${url}/login`, user, { withCredentials: true })
   },
-   getYouTube: function() {
-    return axios.get(url+`/api/YoutubeVideos`);
+  signUp: function (user) {
+    return axios.post(`${url}/signup`, user, { withCredentials: true })
   },
-  getLoggedInUser:function(){
-    return axios.get(`${url}/checkloggedinuser`,{withCredentials:true})
+  getYouTube: function () {
+    return axios.get(`${url}/api/YoutubeVideos`);
+  },
+  getLoggedInUser: function () {
+    return axios.get(`${url}/checkloggedinuser`, { withCredentials: true })
+  },
+  getSavedFavorites: function () {
+    return axios.get(`${url}/savedfavorites`, { withCredentials: true })
   }
- 
 };
-

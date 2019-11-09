@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import JobCard from "../JobCard"
 import './style.css';
+import Axios from "axios";
 
 class JobPostings extends Component {
   state = {
@@ -28,19 +29,20 @@ class JobPostings extends Component {
   };
 
   handleFormSubmit = event => {
+    this.props.clickHandler(this.props.data, this.props.whereToSave);
     event.preventDefault();
-    
+    Axios.post("/api/savearticle")
   };
 
   render() {
     return (
-     <div className="JobPosting">
-         {
-             this.state.JobPostings.map(posting =>{
-                return <JobCard job={posting}/>
-             })
-         }
-     </div>
+      <div className="JobPosting">
+        {
+          this.state.JobPostings.map(posting => {
+            return <JobCard job={posting} />
+          })
+        }
+      </div>
     );
   }
 }
