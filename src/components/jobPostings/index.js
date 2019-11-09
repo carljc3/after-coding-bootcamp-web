@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import FavoriteButton from '../FavoriteButton'
-import "./style.css";
-import Axios from "axios";
+import JobCard from "../JobCard"
+import './style.css';
 
 class JobPostings extends Component {
   state = {
-    JobPostings: [],
-    black: true,
+    JobPostings: []
   };
 
   componentDidMount() {
@@ -16,13 +14,9 @@ class JobPostings extends Component {
 
   loadJobPostings = () => {
     API.getJobPostings()
-      .then(res => {
-        console.log('getJobPostings res', res.data)
-        this.setState({
-          JobPostings: res.data.listings.listing
-
-        })
-      })
+      .then(res =>
+        this.setState({ JobPostings: res.data.listings.listing })
+      )
       .catch(err => console.log(err));
   };
 
@@ -39,26 +33,12 @@ class JobPostings extends Component {
     Axios.post("/api/savearticle")
   };
 
-  postINFORMATION = (info) => {
-
-
-  }
-
   render() {
-    let btn_class = this.state.black ? "blackButton" : "whiteButton";
     return (
       <div className="JobPosting">
         {
           this.state.JobPostings.map(posting => {
-
-            return (
-              <div>
-                <h3 className="JobTitle">{posting.title}</h3>
-                <a className="Link" href={posting.apply_url}>Apply Here!</a>
-                <FavoriteButton title={posting.title} link={posting.apply_url} user={this.state.user} />
-              </div>
-
-            )
+            return <JobCard job={posting} />
           })
         }
       </div>

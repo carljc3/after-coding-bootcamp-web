@@ -11,6 +11,9 @@ import JumboTwo from "../components/Jumbo2/Jumbo2"
 import YoutubePostings from "../components/Youtube";
 
 import Login from "../components/Login/login.js"
+import Footer from "../components/Footer"
+import CatPic from "../components/CatPic"
+
 
 export default class Home extends React.Component {
   state = {
@@ -42,6 +45,14 @@ export default class Home extends React.Component {
         <h3 className="JobsHeader">Jerbs</h3>
         <JobPostings />
         {/* <YoutubePostings/> */}
+
+        <h3 className="JobsHeader">Job Postings</h3>
+        <JobPostings />
+        <CatPic />
+        {/* <YoutubePostings/> */}
+
+        <Footer />
+
 
 
       </div>

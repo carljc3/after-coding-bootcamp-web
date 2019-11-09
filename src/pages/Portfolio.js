@@ -47,39 +47,45 @@ export default class Portfolio extends Component {
           </Col>
           <Col>
             <Card>
-              <Card.Img variant="top" src="https://picsum.photos/50/50/?blur" />
+              <Card.Img variant="top" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
               <Card.Body>
                 <Card.Title>Saved Jobs</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-      </Card.Text>
+                  {this.state.user.savedJobs && this.state.user.savedJobs.map(job => {
+                    return <JobCard job={job} />
+                  })
+                  }
+                </Card.Text>
                 <Button variant="secondary" >Unsave</Button>
               </Card.Body>
             </Card>
           </Col>
           <Col>
             <Card>
-              <Card.Img variant="top" src="https://picsum.photos/50/50/?blur" />
+              <Card.Img variant="top" src="https://images.unsplash.com/photo-1476242906366-d8eb64c2f661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
               <Card.Body>
                 <Card.Title>Saved Articles</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-      </Card.Text>
+                  {this.state.user.favoriteArticles && this.state.user.favoriteArticles.map(article => {
+                    return <ArtCard article={article} />
+                  })
+                  }
+                </Card.Text>
                 <Button variant="secondary" >Unsave</Button>
               </Card.Body>
             </Card>
           </Col>
           <Col>
             <Card>
-              <Card.Img variant="top" src="https://picsum.photos/50/50/?blur" />
+              <Card.Img variant="top" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
               <Card.Body>
                 <Card.Title>Saved Resumes</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-      </Card.Text>
+                  {this.state.user.favoriteResumes && this.state.user.favoriteResumes.map(resume => {
+                    return <ResumeCard resume={resume} />
+                  })
+                  }
+                </Card.Text>
                 <Button variant="secondary" >Unsave</Button>
               </Card.Body>
             </Card>
