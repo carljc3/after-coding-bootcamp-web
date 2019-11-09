@@ -8,14 +8,13 @@ import { Container } from 'react-bootstrap';
 export default function JobCard(props) {
   return (
     <div className="JobCard">
-
       <h3 className="JobTitle">{props.job.title}</h3>
-
-      <a className="ApplyHere" href={props.job.apply_url}>Apply Here</a>
+      <a className="ApplyHere" href={props.job.apply_url}>Apply Here</a><br></br>
       <button className="SaveJob">Save Job</button>
-    
     </div>
-    
+
+
+
 
   )
 }
