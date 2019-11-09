@@ -42,19 +42,14 @@ export default class Home extends React.Component {
         <Resume />
         <JumboTwo />
 
-        <h3 className="JobsHeader">Jerbs</h3>
-        <JobPostings />
-        {/* <YoutubePostings/> */}
-
         <h3 className="JobsHeader">Job Postings</h3>
         <JobPostings />
         <CatPic />
-        {/* <YoutubePostings/> */}
+
+        <h3 className="JobsHeader">Coding Bootcamp Videos</h3>
+        {/* <YoutubePostings /> */}
 
         <Footer />
-
-
-
       </div>
     )
   }

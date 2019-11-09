@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import JobCard from "../JobCard"
 import './style.css';
+import Axios from "axios";
 
 class JobPostings extends Component {
   state = {

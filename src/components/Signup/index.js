@@ -4,8 +4,7 @@ import axios from "axios";
 import { Redirect } from "react-router-dom";
 
 
-<<<<<<< HEAD
-export default class Login extends Component {
+export default class Signup extends Component {
     state = {
         isShown: false,
         email: '',
@@ -22,6 +21,7 @@ export default class Login extends Component {
             [name]: value
         });
     };
+
     handleFormSubmit = event => {
         event.preventDefault();
         API.signUp({
@@ -32,37 +32,8 @@ export default class Login extends Component {
             this.setState({
                 redirect: true
             })
-=======
-export default class Signup extends Component {
-  state = {
-      isShown: false,
-      email: '',
-      password: '',
-      user: "",
-      loggedInUser: '',
-      redirect: false,
-      modalClasses : "modal d-block"
-  };
-  
-  handleInputChange = event => {
-      const { name, value } = event.target;
-      this.setState({
-          [name]: value
-      });
-  };
-  
-  handleFormSubmit = event => {
-      event.preventDefault();
-      API.signUp({
-        username:this.state.username,
-        password:this.state.password
-      }).then(data=>{
-        console.log(data)
-        this.setState ({
-          redirect: true
->>>>>>> 1e32bce4c55f7baad1f33e8605cc15d49bb14765
         })
-    };
+    }
 
     renderRedirect = () => {
         if (this.state.redirect) {
@@ -74,21 +45,17 @@ export default class Signup extends Component {
             modalClasses: 'modal fade'
         })
     }
-<<<<<<< HEAD
-=======
-}
 
-  hideModal = ()=>{
-    this.setState({
-      modalClasses :'modal fade'
-    })
-  }
-  hideModal = ()=>{
-    this.setState({
-      modalClasses :'modal fade'
-    })
-  }
->>>>>>> 1e32bce4c55f7baad1f33e8605cc15d49bb14765
+    hideModal = () => {
+        this.setState({
+            modalClasses: 'modal fade'
+        })
+    }
+    hideModal = () => {
+        this.setState({
+            modalClasses: 'modal fade'
+        })
+    }
 
     render() {
         return (

@@ -96,31 +96,14 @@ export default class Portfolio extends Component {
               <Card.Body>
                 <Card.Title>Saved Videos</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-      </Card.Text>
+                  {this.state.user.favoriteVideos && this.state.user.favoriteVideos.map(video => {
+                    return <VideoCard video={video} />
+                  })
+                  }
+                </Card.Text>
                 <Button variant="secondary" >Unsave</Button>
               </Card.Body>
             </Card>
-            {this.state.user.savedJobs && this.state.user.savedJobs.map(job => {
-              return <JobCard job={job} />
-            })
-            }
-
-            {this.state.user.favoriteArticles && this.state.user.favoriteArticles.map(article => {
-              return <ArtCard article={article} />
-            })
-            }
-
-            {this.state.user.favoriteVideos && this.state.user.favoriteVideos.map(video => {
-              return <VideoCard video={video} />
-            })
-            }
-
-            {this.state.user.favoriteResumes && this.state.user.favoriteResumes.map(resume => {
-              return <ResumeCard resume={resume} />
-            })
-            }
           </Col>
         </Row>
       </Container>
