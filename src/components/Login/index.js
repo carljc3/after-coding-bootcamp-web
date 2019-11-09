@@ -23,18 +23,18 @@ class Login extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     API.logMeIn({
-      username:this.state.username,
-      password:this.state.password
-    }).then(data=>{
+      username: this.state.username,
+      password: this.state.password
+    }).then(data => {
       console.log(data);
     })
   };
 
   renderRedirect = () => {
     if (this.state.redirect) {
-        return <Redirect to='/portfolio' />
+      return <Redirect to='/portfolio' />
     }
-}
+  }
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop

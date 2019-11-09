@@ -10,7 +10,7 @@ import ResumeCard from "../components/ResumeCard"
 export default class Portfolio extends Component {
   state = {
     user: {
-      username: "fakename"
+      username: { this.state.user.username }
     }
   }
   componentDidMount() {

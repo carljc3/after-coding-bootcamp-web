@@ -13,8 +13,11 @@ export default class FavoriteButton extends React.Component {
       link: this.props.link,
       user: this.props.user
     }
-
     Axios.post("http://localhost:3030/api/savedJobs", postBody)
+    this.setState({
+      black: !this.state.black
+    })
+    Axios.post("http://localhost:3030/api/favoriteVideos", postBody)
     this.setState({
       black: !this.state.black
     })
@@ -27,19 +30,14 @@ export default class FavoriteButton extends React.Component {
     } else if (type === "video") {
       //save to video array
       this.setState({ black: !this.state.black })
-    } else if (type === "articles") {
-      //save to articles array
-      this.setState({ black: !this.state.black })
+      console.log(data, type)
     }
-    console.log(data, type)
   }
 
 
 
-  
+
   render() {
-    console.log('~~~~~~~~~~~~~~~')
-    console.log(this.props)
     return (
       <button className={this.state.black ? "blackButton" : "whiteButton"} onClick={this.handleAnotherClick}>
         {this.state.black ? <i className="fa fa-star fa-2x"> Save</i> : <i className="fa fa-star-o fa-2x"> Save</i>}
