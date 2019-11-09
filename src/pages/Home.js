@@ -12,41 +12,39 @@ import YoutubePostings from "../components/Youtube";
 
 import Login from "../components/Login/login.js"
 
-
-
 export default class Home extends React.Component {
-  state={
-    showLogin:false
+  state = {
+    showLogin: false
   }
-  showLogin = ()=>{
+  showLogin = () => {
     this.setState({
-      showLogin:true
+      showLogin: true
     })
   }
-  hideLogin= ()=>{
+  hideLogin = () => {
     this.setState({
-      showLogin : false
+      showLogin: false
     })
   }
   render() {
     return (
       <div>
-      {/* <NavBar/> */}
-      <button onClick={this.showLogin}></button>
-      {this.state.showLogin?<Login clickHandler={this.hideLogin}/>:null}
-      <OurJumbotron title="Searching for your next step?"/>
-      <Card/>
-      <ArticleCard/>
-      <ArticleAccordian/>
-      <Resume/>
-      <JumboTwo/>
+        {/* <NavBar/> */}
+        <button onClick={this.showLogin}></button>
+        {this.state.showLogin ? <Login clickHandler={this.hideLogin} /> : null}
+        <OurJumbotron title="Searching for your next step?" />
+        <Card />
+        <ArticleCard />
+        <ArticleAccordian />
+        <Resume />
+        <JumboTwo />
 
-      <h3 className="JobsHeader">Jerbs</h3>
-      <JobPostings/>
-      {/* <YoutubePostings/> */}
+        <h3 className="JobsHeader">Jerbs</h3>
+        <JobPostings />
+        {/* <YoutubePostings/> */}
 
-  
-   </div>
+
+      </div>
     )
   }
 }

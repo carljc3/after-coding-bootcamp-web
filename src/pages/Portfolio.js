@@ -13,6 +13,8 @@ export default class Portfolio extends Component {
       username: "fakename"
     }
   }
+
+
   componentDidMount() {
     API.getLoggedInUser().then(res => {
       console.log(res.data)
