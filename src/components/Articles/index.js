@@ -6,7 +6,7 @@ import axios from "axios";
 class ArticleAccordian extends React.Component {
 
   saveReview = (newArticle) => {
-    axios.post(`http://localhost:3030/api/portfolio/article`, { newArticle }, { withCredentials: true }).then(response => console.log(response))
+    axios.post(`https://acbc-api.herokuapp.com/api/portfolio/article`, { newArticle }, { withCredentials: true }).then(response => console.log(response))
   }
   render() {
     return (

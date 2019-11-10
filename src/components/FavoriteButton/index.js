@@ -14,9 +14,7 @@ export default class FavoriteButton extends React.Component {
       user: this.props.user
     }
 
-    // this.props.clickHandler(this.props.data, this.props.whereToSave);
-    // event.preventDefault();
-    Axios.post("http://localhost:3030/api/savearticle", postBody)
+    Axios.post("https://acbc-api.herokuapp.com/", postBody)
     this.setState({
       black: !this.state.black
     })
