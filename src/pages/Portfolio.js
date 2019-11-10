@@ -10,7 +10,7 @@ import ResumeCard from "../components/ResumeCard"
 export default class Portfolio extends Component {
   state = {
     user: {
-      username: "fakename"
+      username: "Please sign in."
     }
   }
 
@@ -90,7 +90,7 @@ export default class Portfolio extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          {/* <Col>
             <Card>
               <Card.Img variant="top" src="https://picsum.photos/50/50/?blur" />
               <Card.Body>
@@ -104,7 +104,7 @@ export default class Portfolio extends Component {
                 <Button variant="secondary" >Unsave</Button>
               </Card.Body>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
 
