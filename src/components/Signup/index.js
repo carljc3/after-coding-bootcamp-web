@@ -46,16 +46,16 @@ export default class Signup extends Component {
         })
     }
 
-    hideModal = () => {
-        this.setState({
-            modalClasses: 'modal fade'
-        })
-    }
-    hideModal = () => {
-        this.setState({
-            modalClasses: 'modal fade'
-        })
-    }
+    // hideModal = () => {
+    //     this.setState({
+    //         modalClasses: 'modal fade'
+    //     })
+    // }
+    // hideModal = () => {
+    //     this.setState({
+    //         modalClasses: 'modal fade'
+    //     })
+    // }
 
     render() {
         return (
