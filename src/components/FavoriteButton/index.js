@@ -14,7 +14,7 @@ export default class FavoriteButton extends React.Component {
       user: this.props.user
     }
 
-    Axios.post("https://acbc-api.herokuapp.com/", postBody)
+    Axios.post("http://localhost:3030/", postBody)
     this.setState({
       black: !this.state.black
     })

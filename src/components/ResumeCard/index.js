@@ -7,6 +7,8 @@ export default function ResumeCard(props) {
   return (
     <div className="ResumeCard">
       <h3>{props.resume.title}</h3>
+      
+      <p>{props.resume.url}</p>
     </div>
   )
 }

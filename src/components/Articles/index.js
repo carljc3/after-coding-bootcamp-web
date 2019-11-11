@@ -6,7 +6,7 @@ import axios from "axios";
 class ArticleAccordian extends React.Component {
 
   saveReview = (newArticle) => {
-    axios.post(`https://acbc-api.herokuapp.com/api/portfolio/article`, { newArticle }, { withCredentials: true }).then(response => console.log(response))
+    axios.post(`http://localhost:3030/api/portfolio/article`, { newArticle }, { withCredentials: true }).then(response => console.log(response))
   }
   render() {
     return (
@@ -18,7 +18,7 @@ class ArticleAccordian extends React.Component {
               <Card className="Card fluid">
                 <Card.Header className="CardHeader fluid">
                   <Accordion.Toggle
-                  style={{ color: "white" }}
+                    style={{ color: "white" }}
                     as={Button}
                     variant="link"
                     eventKey="0"
@@ -55,7 +55,7 @@ class ArticleAccordian extends React.Component {
               <Card>
                 <Card.Header className="CardHeader1 fluid">
                   <Accordion.Toggle
-                  style={{ color: "white" }}
+                    style={{ color: "white" }}
                     as={Button}
                     variant="link"
                     eventKey="1"
@@ -92,7 +92,7 @@ class ArticleAccordian extends React.Component {
               <Card>
                 <Card.Header className="CardHeader2 fluid">
                   <Accordion.Toggle
-                  style={{ color: "white" }}
+                    style={{ color: "white" }}
                     as={Button}
                     variant="link"
                     eventKey="2"
@@ -125,7 +125,7 @@ class ArticleAccordian extends React.Component {
               <Card className="Card fluid">
                 <Card.Header className="CardHeader3 fluid">
                   <Accordion.Toggle
-                  style={{ color: "white" }}
+                    style={{ color: "white" }}
                     as={Button}
                     variant="link"
                     eventKey="3"

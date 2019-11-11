@@ -6,7 +6,7 @@ import axios from "axios";
 class Resume extends React.Component {
 
   saveResume = (newResume) => {
-    axios.post(`https://acbc-api.herokuapp.com/api/portfolio/resume`, { newResume }, { withCredentials: true }).then(response => console.log(response))
+    axios.post(`http://localhost:3030/api/portfolio/resume`, { newResume }, { withCredentials: true }).then(response => console.log(response))
   }
   render() {
     return (

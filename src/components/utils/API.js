@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://acbc-api.herokuapp.com"
+const url = "http://localhost:3030"
 
 export default {
   // Gets all jobs
