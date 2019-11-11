@@ -62,7 +62,7 @@ export default class Login extends Component {
                           <div className="modal-header text-center">
                               <h4 className="modal-title w-100 font-weight-bold">Login</h4>
                               <button  onClick={this.props.clickHandler} type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
+                                  <span className= "XButton" aria-hidden="true">&times;</span>
                               </button>
                           </div>
                           <div className="modal-body modal-open mx-3">
@@ -70,12 +70,12 @@ export default class Login extends Component {
                           <h5 className="text-center">Login to your account</h5>
                               <div className="md-form mb-5">
                                   {/* <i className="fas fa-user prefix grey-text"></i> */}
-                                  <label data-error="wrong" data-success="right" htmlFor="form34">Username</label>
+                                  <label className="Username" data-error="wrong" data-success="right" htmlFor="form34">Username:</label>
                                   <input type="text" required name="username" value={this.state.username} onChange={this.handleInputChange} className="form-control" placeholder="" />
 
                                   <br />
                                   {/* <i className="fas fa-lock"></i> */}
-                                  <label data-error="wrong" data-success="right" htmlFor="form34">Password</label>
+                                  <label className="Password" data-error="wrong" data-success="right" htmlFor="form34">Password:</label>
                                   <input type="password" required name="password" value={this.state.password} onChange={this.handleInputChange} className="form-control" placeholder="" />
                               </div>
                           </div>

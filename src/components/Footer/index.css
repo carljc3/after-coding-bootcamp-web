@@ -29,6 +29,30 @@
   color:#f1c145;
 }
 
+.Text{
+  color:lightgray;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px grey;
+  margin:0;
+}
+
+.Icon10,.Icon11{
+  width: 50px;
+  
+}
+
+ul{
+  list-style-type:none;
+}
+
+.Picture1{
+  height: 150px;
+  
+}
+.Picture1:hover{
+  height: 300px;
+}
+
 /* .ContactButtons{ */
   /* color:whitesmoke;
   background-color:#f1c145;
