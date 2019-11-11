@@ -31,7 +31,7 @@ class JobPostings extends Component {
   handleFormSubmit = event => {
     this.props.clickHandler(this.props.data, this.props.whereToSave);
     event.preventDefault();
-    Axios.post("http://localhost:3030/api/savearticle")
+    Axios.post("https://acbc-api.herokuapp.com/api/savearticle")
   };
 
   render() {
