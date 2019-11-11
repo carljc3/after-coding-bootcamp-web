@@ -47,7 +47,7 @@ export default class Home extends React.Component {
         <CatPic />
 
         <h3 className="JobsHeader">Coding Bootcamp Videos</h3>
-        {/* <YoutubePostings /> */}
+        <YoutubePostings />
 
         <Footer />
       </div>

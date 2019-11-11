@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import API from "../utils/API";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
+import "./index.css"
 
 
 export default class Signup extends Component {
@@ -46,17 +47,6 @@ export default class Signup extends Component {
         })
     }
 
-    // hideModal = () => {
-    //     this.setState({
-    //         modalClasses: 'modal fade'
-    //     })
-    // }
-    // hideModal = () => {
-    //     this.setState({
-    //         modalClasses: 'modal fade'
-    //     })
-    // }
-
     render() {
         return (
             <div>
@@ -89,6 +79,7 @@ export default class Signup extends Component {
                     </div>
                 </div>
                 {this.renderRedirect()};
+
           </div>
         )
     }

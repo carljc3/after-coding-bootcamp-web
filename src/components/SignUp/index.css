@@ -2,15 +2,18 @@
   font-family: 'Staatliches', cursive;
   color: white;
   background-color: #2e2e33;
+
 }
 
 div.modal-content{
   background-color: #2e2e33;
+
 }
 
 h5.text-center{
 color:gold;
 font-family: 'Source Code Pro', monospace;
+
 }
 
 .XButton{
@@ -20,6 +23,7 @@ font-family: 'Source Code Pro', monospace;
 .Username{
   color:white;
   font-family: 'Source Code Pro', monospace;
+  
 }
 
 .Password{
