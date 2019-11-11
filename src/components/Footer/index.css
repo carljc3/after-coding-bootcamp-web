@@ -1,7 +1,7 @@
 .FooterHead{
   background-color: lightgray;
   border: none;
-  
+
 
 }
 
@@ -29,11 +29,34 @@
   color:#f1c145;
 }
 
+.Text{
+  color:lightgray;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px grey;
+  margin:0;
+}
+
+.Icon10,.Icon11{
+  width: 50px;
+}
+
+ul{
+  list-style-type:none;
+}
+
+.Picture1{
+  height: 150px;
+
+}
+.Picture1:hover{
+  height: 300px;
+}
+
 /* .ContactButtons{ */
   /* color:whitesmoke;
   background-color:#f1c145;
   border-radius:50px;
   font-size:18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+
 } */

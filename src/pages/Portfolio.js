@@ -17,7 +17,7 @@ export default class Portfolio extends Component {
 
   componentDidMount() {
     API.getLoggedInUser().then(res => {
-      console.log(res.data)
+      console.log('getLoggedInUser', res.data)
       this.setState({ user: res.data })
     }).catch(err => {
       console.log(err.response)
@@ -51,8 +51,9 @@ export default class Portfolio extends Component {
               <Card.Body>
                 <Card.Title>Saved Jobs</Card.Title>
                 <Card.Text>
-                  {this.state.user.savedJobs && this.state.user.savedJobs.map(job => {
-                    return <JobCard job={job} />
+                  {this.state.user.savedJobs && this.state.user.savedJobs.map(article => {
+                    console.log('job posting', article)
+                    return <ArtCard article={article}/>
                   })
                   }
                 </Card.Text>
