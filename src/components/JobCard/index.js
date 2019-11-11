@@ -1,9 +1,6 @@
 import React from 'react';
-
-
 import './style.css'
-import { Container } from 'react-bootstrap';
-
+import { Container, FormText } from 'react-bootstrap';
 
 export default function JobCard(props) {
   return (
