@@ -7,7 +7,7 @@ export default class JobCard extends React.Component {
   saveJob = (newJob) => {
     // console.log('newJob', newJob.jobPosting.job.title)
 
-    axios.post(`http://localhost:3030/api/portfolio/jobs`, { newJob }, { withCredentials: true }).then(response => console.log(response))
+    axios.post(`https://acbc-api.herokuapp.com/api/portfolio/jobs`, { newJob }, { withCredentials: true }).then(response => console.log(response))
   }
 
   render() {
@@ -19,7 +19,7 @@ export default class JobCard extends React.Component {
       <div className="JobCard">
         <h3 className="JobTitle">{this.props.job.title}</h3>
         <a className="ApplyHere" href={this.props.job.apply_url}>Apply Here</a><br /><br />
-        <button className="SaveJob" onClick={() => this.saveJob( {url: this.props.job.apply_url, title: this.props.job.title} )}>Save</button>
+        <button className="SaveJob" onClick={() => this.saveJob({ url: this.props.job.apply_url, title: this.props.job.title })}>Save</button>
       </div>
     )
   }

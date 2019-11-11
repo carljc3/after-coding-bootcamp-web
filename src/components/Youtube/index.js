@@ -16,7 +16,7 @@ class YoutubePostings extends Component {
 
       .then(res =>
         this.setState({ YoutubePosting: res.data.items })
-        
+
       )
       .catch(err => console.log(err));
   };
@@ -31,24 +31,24 @@ class YoutubePostings extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
+
   };
 
   render() {
     return (
-     <div className = "youTubeFlex">
-         {
-             this.state.YoutubePosting.map(video =>{
-                //  return (
-                // <div className= "container">
-                //     <h3>Kind: {video.kind}</h3>
-                //     <h1>E tag: {video.snippet.channelId} </h1>
-                // </div>)
-                return <YouTubeVideoCard videoId={video.id.videoId}/>
-             })
-            
+      <div className="youTubeFlex">
+        {
+          this.state.YoutubePosting.map(video => {
+            //  return (
+            // <div className= "container">
+            //     <h3>Kind: {video.kind}</h3>
+            //     <h1>E tag: {video.snippet.channelId} </h1>
+            // </div>)
+            return <YouTubeVideoCard videoId={video.id.videoId} />
+          })
+
         }
-     </div>
+      </div>
     );
   }
 }
