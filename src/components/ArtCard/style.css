@@ -1,11 +1,7 @@
-.ArtCard {
-    text-align: center;
-    overflow: scroll;
-    color: #00c991;
-    width: 20vw;
-    font-family: 'Staatliches', cursive;
-    height: 200px;
-    font-size: 28px;
-    border: 1px solid greenyellow;
-    text-shadow: 1px 1px 1px grey;
-}
+.ArtCard{
+  text-align: center;
+  color:#00c991;
+  font-family: 'Staatliches', cursive;
+  font-size: 28px;
+  text-shadow: 1px 1px 1px grey;
+  }

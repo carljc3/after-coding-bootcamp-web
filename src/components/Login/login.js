@@ -52,6 +52,35 @@ export default class Login extends Component {
   }
 
   render() {
+
+      return (
+          <div>
+              <div className={this.state.modalClasses} id="modalChefLogInForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                  aria-hidden="true">
+                  <div className="modal-dialog" role="document">
+                      <div className="modal-content">
+                          <div className="modal-header text-center">
+                              <h4 className="modal-title w-100 font-weight-bold">Login</h4>
+                              <button  onClick={this.props.clickHandler} type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                  <span className= "XButton" aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div className="modal-body modal-open mx-3">
+
+                          <h5 className="text-center">Login to your account</h5>
+                              <div className="md-form mb-5">
+                                  {/* <i className="fas fa-user prefix grey-text"></i> */}
+                                  <label className="Username" data-error="wrong" data-success="right" htmlFor="form34">Username:</label>
+                                  <input type="text" required name="username" value={this.state.username} onChange={this.handleInputChange} className="form-control" placeholder="" />
+
+                                  <br />
+                                  {/* <i className="fas fa-lock"></i> */}
+                                  <label className="Password" data-error="wrong" data-success="right" htmlFor="form34">Password:</label>
+                                  <input type="password" required name="password" value={this.state.password} onChange={this.handleInputChange} className="form-control" placeholder="" />
+                              </div>
+                          </div>
+                          <div className="modal-footer d-flex justify-content-center">
+
     return (
       <div>
         <div className={this.state.modalClasses} id="modalChefLogInForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -79,6 +108,7 @@ export default class Login extends Component {
                 </div>
               </div>
               <div className="modal-footer d-flex justify-content-center">
+
 
 
                 <button onClick={this.handleFormSubmit} data-dismiss="modal" className="login-btn btn btn-info my-4 btn-block" type="submit">Log In</button>

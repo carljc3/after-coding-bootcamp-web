@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import API from "../utils/API";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
+import "./index.css"
 
 
 export default class Signup extends Component {
@@ -57,6 +58,40 @@ export default class Signup extends Component {
     //     })
     // }
 
+
+  render() {
+      return (
+          <div>
+              <div className={this.state.modalClasses} id="modalChefLogInForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                  aria-hidden="true">
+                  <div className="modal-dialog" role="document">
+                      <div className="modal-content">
+                          <div className="modal-header text-center">
+                              <h4 className="modal-title w-100 font-weight-bold">Sign Up</h4>
+                              <button  onClick={this.props.clickHandler} type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                  <span className= "XButton" aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div className="modal-body modal-open mx-3">
+                          <h5 className="text-center">Create an account!</h5>
+                              <div className="md-form mb-5">
+                                  {/* <i className="fas fa-user prefix grey-text"></i> */}
+                                  <label className="Username" data-error="wrong" data-success="right" htmlFor="form34">Username:</label>
+                                  <input type="text" required name="username" value={this.state.username} onChange={this.handleInputChange} className="form-control" placeholder="" />
+                                  <br />
+                                  {/* <i className="fas fa-lock"></i> */}
+                                  <label className="Password" data-error="wrong" data-success="right" htmlFor="form34">Password:</label>
+                                  <input type="password" required name="password" value={this.state.password} onChange={this.handleInputChange} className="form-control" placeholder="" />
+                              </div>
+                          </div>
+                          <div className="modal-footer d-flex justify-content-center">
+                              <button onClick={this.handleFormSubmit} data-dismiss="modal" className="login-btn btn btn-info my-4 btn-block" type="submit">Create</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              {this.renderRedirect()};
+
     render() {
         return (
             <div>
@@ -89,6 +124,7 @@ export default class Signup extends Component {
                     </div>
                 </div>
                 {this.renderRedirect()};
+
           </div>
         )
     }
