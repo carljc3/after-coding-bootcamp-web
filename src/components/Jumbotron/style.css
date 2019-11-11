@@ -2,8 +2,10 @@
    /* background-image: linear-gradient(to bottom right,  #65ad9a,  #c7d8c7); */
 background-image: url("https://2e8ram2s1li74atce18qz5y1-wpengine.netdna-ssl.com/wp-content/uploads/2019/05/Coding-Bootcamp-Ratings-Dice-1200x750.png");
 background-size: cover;
-height: 500px;
+/* height: 500px; */
 /* opacity: 0.9; */
+height: 100vh;
+box-shadow: 0px 5px 5px grey;
 
 }
 
