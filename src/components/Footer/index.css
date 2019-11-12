@@ -1,62 +1,51 @@
-.FooterHead{
+.FooterHead {
   background-color: lightgray;
   border: none;
-  
-
 }
 
-.CardBodyFooter{
+.CardBodyFooter {
   text-align: center;
-  color:#00c991;
-  font-family: 'Staatliches', cursive;
+  color: #00c991;
+  font-family: "Staatliches", cursive;
   font-size: 28px;
   text-shadow: 1px 1px 1px grey;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.FooterImg{
+.FooterImg {
   height: 300px;
 }
 
-.Ptag{
-  color:grey;
-  font-family: 'Source Code Pro', monospace;
+.Ptag {
+  color: grey;
+  font-family: "Source Code Pro", monospace;
   font-size: 17px;
   text-shadow: 0px 0px 0px grey;
 }
 
-.PtagACBC{
-  color:#f1c145;
+.PtagACBC {
+  color: #f1c145;
 }
 
-.Text{
-  color:lightgray;
+.Text {
+  color: lightgray;
   font-size: 16px;
   text-shadow: 1px 1px 1px grey;
-  margin:0;
+  margin: 0;
 }
 
-.Icon10,.Icon11{
+.Icon10,
+.Icon11 {
   width: 50px;
 }
 
-ul{
-  list-style-type:none;
+ul {
+  list-style-type: none;
 }
 
-.Picture1{
+.Picture1 {
   height: 150px;
-
 }
-.Picture1:hover{
+.Picture1:hover {
   height: 300px;
 }
-
-/* .ContactButtons{ */
-  /* color:whitesmoke;
-  background-color:#f1c145;
-  border-radius:50px;
-  font-size:18px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
-} */
