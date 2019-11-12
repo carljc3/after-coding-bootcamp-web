@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import API from "../utils/API";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
-import "./index.css"
+import "../Signup/index.css"
 
 
 export default class Signup extends Component {
