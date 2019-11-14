@@ -25,87 +25,99 @@ export default class Portfolio extends Component {
   
   render() {
     return (
-      <Container>
-        <Row>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              {/* <Card.Img variant="top" src="https://www.pngkey.com/png/full/349-3499617_person-placeholder-person-placeholder.png" /> */}
-              <Card.Body>
-                <Card.Title>{this.state.user.username}</Card.Title>
-              </Card.Body>
-              {/* <ListGroup className="list-group-flush">
-                <ListGroupItem>{this.state.user.bootcamp}</ListGroupItem>
-                <ListGroupItem>{this.state.user.review}</ListGroupItem>
-                <ListGroupItem>{this.state.user.rating}</ListGroupItem>
-              </ListGroup> */}
-              <Card.Body>
-                <a href="/"><Button fluid className="HomeButton" variant="light">Home</Button></a>
-                <a href="logout"><Button variant="secondary" >Sign Out</Button></a>
-              </Card.Body>
+<Container>
+      <Row>
+      <Col xs={6}>
+      <Card style={{ width: '18rem' }}>
+             <Card.Img variant="top" src="https://www.pngkey.com/png/full/349-3499617_person-placeholder-person-placeholder.png" />
+             <Card.Body>
+               <Card.Title>{this.state.user.username}</Card.Title>
+             </Card.Body>
+             <ListGroup className="list-group-flush">
+               <ListGroupItem>Goal:{this.state.user.bootcamp}</ListGroupItem>
+               {/* <ListGroupItem>{this.state.user.review}</ListGroupItem>
+               <ListGroupItem>{this.state.user.rating}</ListGroupItem> */}
+             </ListGroup>
+             <Card.Body>
+               <a href="/"><Button fluid className="HomeButton" variant="light">Home</Button></a>
+               <a href="logout"><Button variant="secondary" >Sign Out</Button></a>
+             </Card.Body>
             </Card>
-          </Col>
-          <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+      </Col>
+
+      <Col xs={6}>
+      <Card>
+    <Card.Img variant="top" src="https://i.imgur.com/W4vJPym.png" />
     <Card.Body>
-    <Card.Title>Saved Jobs</Card.Title>
+    <Card.Title>Saved Jobs:</Card.Title><br></br>
       <Card.Text>
-      {this.state.user.savedJobs && this.state.user.savedJobs.map(job=>{
+    {this.state.user.savedJobs && this.state.user.savedJobs.map(job=>{
     return <JobCard job={job}/>
     })
 }
-      </Card.Text>
+</Card.Text>
       <Button variant="secondary" >Unsave</Button>
     </Card.Body>
   </Card>
-          </Col>
-          <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1476242906366-d8eb64c2f661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-    <Card.Body>
-    <Card.Title>Saved Articles</Card.Title>
+
+<Card>
+  <Card.Body>
+  <Card.Title>Saved Articles:</Card.Title><br></br>
       <Card.Text>
-      {this.state.user.favoriteArticles && this.state.user.favoriteArticles.map(article=>{
+     {this.state.user.favoriteArticles && this.state.user.favoriteArticles.map(article=>{
     return <ArtCard article={article}/>
     })
 }
       </Card.Text>
       <Button variant="secondary" >Unsave</Button>
-    </Card.Body>
-  </Card>
-          </Col>
-          <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-    <Card.Body>
-    <Card.Title>Saved Resumes</Card.Title>
-      <Card.Text>
-      {this.state.user.favoriteResumes && this.state.user.favoriteResumes.map(resume=>{
+</Card.Body>
+</Card>
+<Card>
+  <Card.Body>
+    <Card.Title>Saved Resumes:</Card.Title><br></br>
+     <Card.Text>
+     {this.state.user.favoriteResumes && this.state.user.favoriteResumes.map(resume=>{
     return <ResumeCard resume={resume}/>
     })
 }
       </Card.Text>
       <Button variant="secondary" >Unsave</Button>
-    </Card.Body>
-  </Card>
-          </Col>
-          <Col>
-          <Card>
-    <Card.Img variant="top" src="https://images.unsplash.com/photo-1541877944-ac82a091518a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-    <Card.Body>
-    <Card.Title>Saved Videos</Card.Title>
-      <Card.Text>
-      {this.state.user.favoriteVideos && this.state.user.favoriteVideos.map(video=>{
-    return <VideoCard video={video}/>
-    })
-}
-      </Card.Text>
-      <Button variant="secondary" >Unsave</Button>
-    </Card.Body>
-  </Card>
-          </Col>
-        </Row>
-      </Container>
+  </Card.Body>
+</Card>
+
+      </Col>
+     
+    </Row>
+  </Container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+//           <Col>
+//           <Card>
+//     <Card.Img variant="top" src="https://images.unsplash.com/photo-1541877944-ac82a091518a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+//     <Card.Body>
+//     <Card.Title>Saved Videos</Card.Title>
+//       <Card.Text>
+//       {this.state.user.favoriteVideos && this.state.user.favoriteVideos.map(video=>{
+//     return <VideoCard video={video}/>
+//     })
+// }
+//       </Card.Text>
+//       <Button variant="secondary" >Unsave</Button>
+//     </Card.Body>
+//   </Card>
+//           </Col>
+//        
     )
   }
 }
