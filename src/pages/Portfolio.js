@@ -8,21 +8,22 @@ import VideoCard from "../components/VideoCard"
 import ResumeCard from "../components/ResumeCard"
 
 export default class Portfolio extends Component {
-  state={
-    user:{
-      username:"fakename"
+  state = {
+    user: {
+      username: "Please sign in."
     }
   }
 
-  componentDidMount(){
-    API.getLoggedInUser().then(res=>{
-      console.log(res.data)
-      this.setState({user:res.data})
-    }).catch(err=>{
+
+  componentDidMount() {
+    API.getLoggedInUser().then(res => {
+      console.log('getLoggedInUser', res.data)
+      this.setState({ user: res.data })
+    }).catch(err => {
       console.log(err.response)
     })
   }
-  
+
   render() {
     return (
 <Container>
@@ -43,6 +44,7 @@ export default class Portfolio extends Component {
                <a href="logout"><Button variant="secondary" >Sign Out</Button></a>
              </Card.Body>
             </Card>
+
       </Col>
 
       <Col xs={6}>
@@ -90,34 +92,8 @@ export default class Portfolio extends Component {
     </Row>
   </Container>
 
-
-
-
-
-
-
-
-
-
-
-
-
-//           <Col>
-//           <Card>
-//     <Card.Img variant="top" src="https://images.unsplash.com/photo-1541877944-ac82a091518a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-//     <Card.Body>
-//     <Card.Title>Saved Videos</Card.Title>
-//       <Card.Text>
-//       {this.state.user.favoriteVideos && this.state.user.favoriteVideos.map(video=>{
-//     return <VideoCard video={video}/>
-//     })
-// }
-//       </Card.Text>
-//       <Button variant="secondary" >Unsave</Button>
-//     </Card.Body>
-//   </Card>
-//           </Col>
-//        
+     
+    
     )
   }
 }

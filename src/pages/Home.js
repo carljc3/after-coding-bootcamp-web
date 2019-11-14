@@ -16,42 +16,41 @@ import CatPic from "../components/CatPic"
 
 
 export default class Home extends React.Component {
-  state={
-    showLogin:false
+  state = {
+    showLogin: false
   }
-  showLogin = ()=>{
+  showLogin = () => {
     this.setState({
-      showLogin:true
+      showLogin: true
     })
   }
-  hideLogin= ()=>{
+  hideLogin = () => {
     this.setState({
-      showLogin : false
+      showLogin: false
     })
   }
   render() {
     return (
       <div>
-      {/* <NavBar/> */}
-      <button onClick={this.showLogin}></button>
-      {this.state.showLogin?<Login clickHandler={this.hideLogin}/>:null}
-      <OurJumbotron title="Searching for your next step?"/>
-      <Card/>
-      <ArticleCard/>
-      <ArticleAccordian/>
-      <Resume/>
-      <JumboTwo/>
+        {/* <NavBar/> */}
+        <button onClick={this.showLogin}></button>
+        {this.state.showLogin ? <Login clickHandler={this.hideLogin} /> : null}
+        <OurJumbotron title="Searching for your next step?" />
+        <Card />
+        <ArticleCard />
+        <ArticleAccordian />
+        <Resume />
+        <JumboTwo />
 
-      <h3 className="JobsHeader">Job Postings</h3>
-      <JobPostings/>
-      <CatPic/>
-      {/* <YoutubePostings/> */}
+        <h3 className="JobsHeader">Job Postings</h3>
+        <JobPostings />
+        <CatPic />
 
-      <Footer/>
-      
+        <h3 className="JobsHeader">Coding Bootcamp Videos</h3>
+        <YoutubePostings />
 
-  
-   </div>
+        <Footer />
+      </div>
     )
   }
 }
